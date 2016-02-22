@@ -9,17 +9,49 @@ header{
 		overflow:hidden;
 		padding: 2em;
 
+		@include desde (tablet-h){
+			padding: 2em 5em;
+		}
+
+		@include desde (web){
+			padding: 2em;
+		}
+
+
 		h1{
 			color:$blanco;
 			font-weight: $normal;
 			font-style: italic;
 			font-size: 1.4em;
 			margin:0;
+
+			@include desde (web){
+				float: left;
+				margin-left: 85px;
+			}
+
 		}
+
+
+		// h1{
+		// 	color:$blanco;
+		// 	font-weight: $normal;
+		// 	font-style: italic;
+		// 	font-size: 1.4em;
+		// 	margin:0;
+		// }
 		form#login{
 			width: 100%;
 			height: auto;
 			margin-top: 1em;
+			@include desde (hd){
+				width: 60%;
+				height: auto;
+				margin-top: 1em;
+				float: left;
+				margin-left: 5%;
+			}
+			
 			label{
 				width: 100%;
 				float: left;
@@ -41,7 +73,7 @@ header{
 					font-size: 0.9em;
 				}
 				@include desde (web){
-					width: 60%;
+					width: 100%;//60
 				}
 			}
 			button[type="submit"]{
@@ -65,7 +97,7 @@ header{
 						text-transform: uppercase;
 					}
 					@include desde (web){
-						width: 60%;
+						width: 100%;//60
 						padding:6px;
 					}
 				&:hover{
@@ -90,12 +122,74 @@ header{
 			}
 		}
 	}
-	#box--blue{
+	// #box--blue{
+	// 	//height: 435px;
+	// 	height: 235px;
+	// 	background-color: $cyan;
+	// 	margin-top: 30px;
+	// 	margin-bottom: 30px;
+	// 	position:relative;
+	// 	@include desde (movil){
+	// 		//height: 175px;
+	// 	}
+	// 	@include desde (movil-h){
+	// 		height: 315px;
+	// 	}
+	// 	@include desde (tablet){
+	// 		height: 435px;
+	// 	}
+	// 	//@include desde (web){}		
+	// 	#royalito{
+	// 		width: 58%;
+	// 		position:relative;
+
+	// 		img.topR{
+	// 			margin-top:20px;
+	// 			@include desde (tablet){
+	// 				margin-top:80px;
+	// 			}
+	// 		}
+	// 	}
+	// 	#linea_texto{
+	// 		position: absolute;
+	// 		top: 110px;
+	// 		right: 0px;
+	// 		width: 50%;
+	// 		@include desde (movil){}
+	// 		@include desde (tablet){
+	// 			top: 170px;
+	// 			right: 30px;
+	// 		}
+	// 		h2{
+	// 			font-size: 0.8em;
+	// 			color:$blanco;
+	// 			font-weight: $semi-bold;
+	// 			padding:0.6em;
+	// 			margin-bottom: 2px;
+	// 			position: absolute;
+	// 			top: -90px;
+	// 			right: 0;
+	// 			text-align: center;
+	// 			@include desde (movil){
+	// 				top: -70px;
+	// 			}
+	// 			@include desde (movil-h){
+	// 				font-size: 1.1em;
+	// 			}
+	// 			@include desde (tablet){
+	// 				font-size: 1.2em;
+	// 				top: -110px;
+	// 			}
+	// 		}
+	// 	}
+	// }//fin
+
+#box--blue{
 		//height: 435px;
-		height: 235px;
+		height: 145px; //235px
 		background-color: $cyan;
 		margin-top: 30px;
-		margin-bottom: 30px;
+		margin-bottom: 1px;//30
 		position:relative;
 		@include desde (movil){
 			//height: 175px;
@@ -104,38 +198,52 @@ header{
 			height: 315px;
 		}
 		@include desde (tablet){
-			height: 435px;
+			height: 185px;//435
 		}
 		//@include desde (web){}		
 		#royalito{
 			width: 58%;
 			position:relative;
+			display: none;
+			@include desde (tablet){
+				display: block;
+				width: 34%;
+				top: -70px;
+			}
+
+			@include desde (tablet-h){
+				width: 26%;
+				left: 90px;
+			}
 
 			img.topR{
 				margin-top:20px;
 				@include desde (tablet){
-					margin-top:80px;
+					margin-top:10px;//80
 				}
 			}
 		}
 		#linea_texto{
 			position: absolute;
-			top: 110px;
+			top: 110px;//110
 			right: 0px;
-			width: 50%;
-			@include desde (movil){}
+			width: 99%;//50
+			img{
+				display: none;
+			}
 			@include desde (tablet){
 				top: 170px;
 				right: 30px;
+				width: 65%;
 			}
 			h2{
-				font-size: 0.8em;
+				font-size: 1.2em;
 				color:$blanco;
 				font-weight: $semi-bold;
 				padding:0.6em;
 				margin-bottom: 2px;
 				position: absolute;
-				top: -90px;
+				top: -102px;//-90
 				right: 0;
 				text-align: center;
 				@include desde (movil){
@@ -145,13 +253,18 @@ header{
 					font-size: 1.1em;
 				}
 				@include desde (tablet){
-					font-size: 1.2em;
-					top: -110px;
+					font-size: 1.6em;//1.2
+					top: -160px;//-110px
+					font-style: italic;
 				}
 			}
 		}
 	}
+
+
+
 	//checklogin
+
 	#box--check{
 		overflow:hidden;
 		padding: 2em;
@@ -204,6 +317,60 @@ header{
 			}
 		}
 	}
+
+
+	// #box--check{
+	// 	overflow:hidden;
+	// 	padding: 2em;
+	// 	position:relative;
+	// 	#royalito-check{
+	// 		position:relative;
+	// 		width: 90%;
+	// 		text-align: center;
+	// 	}
+	// 	#base--globo{
+	// 		width: 45%;
+	// 		position:absolute;
+	// 		top:170px;
+	// 		right: 0;
+	// 	}
+	// 	p.garabatos{
+	// 		position: absolute;
+	// 		color: #706F6F;
+
+	// 		@include desde (tablet){
+	// 			top: 7.5em;
+	// 			right: -11px;
+	// 			font-size: 1.2em;
+	// 		}
+	// 		@include desde (web){
+	// 			top: 4.5em;
+	// 			right: 0;
+	// 			font-size: 1.8em;	
+	// 		}
+	// 	}
+	// 	p.recuperar{
+	// 		position: absolute;
+	// 		color: #706F6F;
+	// 		top: 7.5em;
+	// 		right: 0px;
+	// 		font-size: 1.2em;
+	// 		font-weight: 700;
+	// 		text-transform: uppercase;
+	// 	}
+
+	// 	//ok encuesta
+	// 	#check-verde{
+	// 		position:absolute;
+	// 		@include desde (tablet){
+	// 			right: 40px;
+	// 			top: 100px;
+	// 		}
+	// 		@include desde (web){
+	// 			right: 60px;
+	// 		}
+	// 	}
+	// }//fin
 	#alerta{
 
 		@include desde (tablet){
@@ -316,6 +483,54 @@ header{
 		}
 	}
 }
+
+
+//royalito
+
+	.TopBox{
+		background: $cyan;
+		float: left;
+		border-bottom: 1px solid #006b93;
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-top: 30px;
+		
+		@include desde (tablet){
+			width: 100%;
+			height: 150px;
+		}
+
+		.royalito_mono{
+			position: absolute;
+			left: 0;
+			width: 50%;
+			top: -40px;
+			@include desde (tablet){
+				left: 70px;
+				width: 30%;
+				top: -65px;
+			}
+			@include desde (tablet-h){
+				width: 25%;
+				top: -95px;
+			}
+		}
+		
+		p.noob{
+			color:#fff;
+			font-size: 0.75em;
+			padding: 1em 0;
+
+			@include desde (tablet){
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+
+		}
+	}
+
+
 
 #content{
 	h4{
@@ -532,3 +747,100 @@ section{
 		}
 	}
 }	
+
+
+
+form.Formulario-registro{
+	padding: 30px 80px;
+	background: #e5f7fd;
+	p{
+		color:#006b93;
+		margin:10px;
+		font-weight: bold;
+		position: relative;
+		@include desde (web){
+			font-size: 1.2em;
+		}
+		span.numerales{
+			position: absolute;
+			background: #00aeef;
+			color: #fff;
+			border: 2px solid #006b93;
+			width: 35px;
+			height: 35px;
+			display: block;
+			text-align: center;
+			line-height: 30px;
+			left: -100px;
+			top: 0;
+			display: none;
+			@include desde (web){
+				display: block;
+			}
+		}
+	}
+	fieldset{
+		padding: 0;
+		margin:0;
+		border: 0;
+		label{
+			width: 100%;
+			display: block;
+			margin:5px 0;
+			color:#006b93;
+			font-weight: bold;
+			font-size: 0.8em;
+		}
+		input[type="text"]{
+			width: 100%;
+			padding: 3px;
+			color:#006b93;
+			font-size: 0.8em;
+		}
+
+		//radiiobuttons
+		input[type="radio"]{
+			margin-bottom: 1em;
+		}
+		span.Rbutt{
+			font-size: 0.8em;
+			font-weight: bold;
+			color:#006b93;
+			margin-left: 10px;
+		}
+
+		//desplegable conyuge y demases
+		.estosDatos{
+			padding: 5px 5px 15px 5px;
+			background: #b7e8fa;
+			float: left;
+		}
+
+		button.addChild{
+			width: 100%;
+			background: url(../img/plus.png) no-repeat left center;
+			border: none;
+			padding: 10px 10px 10px 25px;
+			cursor: pointer;
+			font-size: 0.8em;
+			font-weight: bold;
+			color:#006b93;
+			text-align: left;
+		}
+		input.reg{
+			background: #0299d2;
+			color: #fff;
+			text-align: center;
+			border: 1px solid #006b93;
+			margin:1em 0;
+			padding:0.5em 1em;
+		}
+		select{
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
+
+

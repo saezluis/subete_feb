@@ -1979,9 +1979,6 @@ h5 {
 h6 {
   font-size: 0.8em; }
 
-.nono {
-  padding: 0 !important; }
-
 header .arriba {
   margin: 40px 0; }
 header #box--login {
@@ -2008,11 +2005,13 @@ header #box--login {
     width: 100%;
     height: auto;
     margin-top: 1em; }
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1400px) {
       header #box--login form#login {
+        width: 60%;
+        height: auto;
+        margin-top: 1em;
         float: left;
-        width: 55%;
-        margin-left: 80px; } }
+        margin-left: 5%; } }
     header #box--login form#login label {
       width: 100%;
       float: left;
@@ -2263,7 +2262,8 @@ header #box--naranja form#registrate {
     @media screen and (min-width: 1025px) {
       header #box--naranja form#registrate button[type="submit"] {
         width: 100%; } }
-header .TopBox {
+
+.TopBox {
   background: #02aeef;
   float: left;
   border-bottom: 1px solid #006b93;
@@ -2272,29 +2272,29 @@ header .TopBox {
   top: 0;
   margin-top: 30px; }
   @media screen and (min-width: 768px) {
-    header .TopBox {
+    .TopBox {
       width: 100%;
       height: 150px; } }
-  header .TopBox .royalito_mono {
+  .TopBox .royalito_mono {
     position: absolute;
     left: 0;
     width: 50%;
     top: -40px; }
     @media screen and (min-width: 768px) {
-      header .TopBox .royalito_mono {
+      .TopBox .royalito_mono {
         left: 70px;
         width: 30%;
         top: -65px; } }
     @media screen and (min-width: 1024px) {
-      header .TopBox .royalito_mono {
+      .TopBox .royalito_mono {
         width: 25%;
         top: -95px; } }
-  header .TopBox p.noob {
+  .TopBox p.noob {
     color: #fff;
     font-size: 0.75em;
     padding: 1em 0; }
     @media screen and (min-width: 768px) {
-      header .TopBox p.noob {
+      .TopBox p.noob {
         font-size: 1.4em;
         font-weight: bold; } }
 
@@ -2733,9 +2733,6 @@ section #menu-beneficios {
 body {
   background: url(../img/bg.jpg) repeat; }
 
-.noBack {
-  background: #fff !important; }
-
 #strip {
   background: url(../img/strip.jpg) repeat-x;
   height: 8px;
@@ -2757,8 +2754,20 @@ header {
     @media screen and (min-width: 320px) {
       header #logo_royal {
         display: none; } }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       header #logo_royal {
+        display: block; } }
+  header #logo_multitecnica {
+    position: absolute;
+    width: 126px;
+    height: 71px;
+    top: 30%;
+    left: 130px; }
+    @media screen and (min-width: 320px) {
+      header #logo_multitecnica {
+        display: none; } }
+    @media screen and (min-width: 1024px) {
+      header #logo_multitecnica {
         display: block; } }
   header #logo-for-unilever {
     width: 332px;
@@ -3119,49 +3128,6 @@ section#search {
         color: #706f6f;
         font-size: 0.9em;
         margin-bottom: 0.8em; }
-    #main #content p.proximamente {
-      font-size: 2.4em;
-      color: #040452;
-      text-align: left;
-      font-weight: bold;
-      line-height: 1; }
-    #main #content a.patras {
-      background: #02599c;
-      padding: 0.7em 1em;
-      color: #fff;
-      text-align: center;
-      font-size: 0.9em;
-      text-decoration: none;
-      transition: all .3s; }
-      #main #content a.patras:hover {
-        background: #040452; }
-    #main #content .caja-senaletica {
-      width: 100%;
-      text-align: center; }
-      #main #content .caja-senaletica .item-senaletica {
-        width: 100px;
-        border: 1px solid #c6c5c6;
-        padding: 1em; }
-      #main #content .caja-senaletica p.sen {
-        color: #040452;
-        font-size: 0.9em;
-        line-height: 1; }
-      @media screen and (min-width: 320px) {
-        #main #content .caja-senaletica:before, #main #content .caja-senaletica:after {
-          clear: both;
-          content: " ";
-          display: table;
-          width: 100%; }
-        #main #content .caja-senaletica > item-senaletica, #main #content .caja-senaletica > .item-senaletica {
-          float: left;
-          width: 30%;
-          margin-right: 5%;
-          margin-bottom: 5%; }
-          #main #content .caja-senaletica > item-senaletica:nth-child(3n), #main #content .caja-senaletica > .item-senaletica:nth-child(3n) {
-            margin-right: 0;
-            clear: right; }
-          #main #content .caja-senaletica > item-senaletica:nth-child(3n+1), #main #content .caja-senaletica > .item-senaletica:nth-child(3n+1) {
-            clear: left; } }
     #main #content #contenido {
       width: 100%;
       float: left;

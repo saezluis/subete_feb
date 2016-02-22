@@ -27,10 +27,25 @@ header{
 		@include desde (base){
 			display: none;
 		}
-		@include desde (tablet){
+		@include desde (tablet-h){
 			display: block;
 		}
 	}
+
+	#logo_multitecnica{
+		position:absolute;
+		width: 126px;
+		height: 71px;
+		top:30%;
+		left:130px;
+		@include desde (base){
+			display: none;
+		}
+		@include desde (tablet-h){
+			display: block;
+		}
+	}
+
 	#logo-for-unilever{
 		width: 332px;
 		height: 136px;
