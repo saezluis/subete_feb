@@ -1,0 +1,176 @@
+header{
+	//primer menu
+	#menu{
+		width: 100%;
+		height: auto;
+		@include desde (tablet){
+			margin-top:1.2em;
+		}
+		ul{
+			margin: 0;
+			padding:0;
+			list-style: none;
+			text-align:right;
+			li{
+				display: inline-block;
+				text-align: right;
+				border-right: 1px solid $gris_oscuro;
+				padding:0 1em;
+				&:last-child{
+					border-right: none;
+				}
+				a{
+					color:$gris_oscuro;
+					text-decoration: none;
+					&:hover{
+						color:$gris_claro;
+					}
+				}
+			}
+		}
+	}//menu
+}
+
+section{
+	background: $blanco;
+	nav.navegacion{
+		width: 100%;
+		height: auto;
+		overflow:hidden;
+		padding-bottom:1.8em;
+		ul{
+			margin: 0;
+			padding:0;
+			list-style: none;
+			li{
+				display:inline-block;
+				line-height: 0;
+				@include desde (base){
+					width: 50%;
+					float: left;
+					border-right: 1px solid $blanco;
+					&:last-child{
+						border-right:0;
+					}
+					border-bottom: 1px solid $blanco;
+				}
+				@include desde (tablet){
+					width: auto;
+					float: none;
+				}
+				a{
+					color: $blanco;
+					text-decoration:none;
+					font-size: 0.9em;
+					margin:0;
+					display: block;
+					transition: all .3s;
+					@include desde (base){
+						text-align: center;
+					}
+					@include desde (tablet){
+						text-align: none;
+					}
+				}
+				a.seguridad{
+					background: #90c03d;
+					padding:1.5em 1em;
+					&:hover{
+						background:#7ca633;
+					}
+				}
+				a.productividad{
+					background: #ec2a8c;
+					padding:1.5em 1em;
+					&:hover{
+						background: #c42375;
+					}
+				}
+				a.responsabilidad{
+					background: #02aeef;
+					padding:1.5em 1em;
+					&:hover{
+						background: #0485b6;
+					}
+				}
+				a.superacion{
+					background: #f47d34;
+					padding:1.5em 1em;
+					&:hover{
+						background: #c85e1b;
+					}
+				}
+				a.optimismo{
+					background: #40ad48;
+					padding:1.5em 1em;
+					&:hover{
+						background: #2a7631;
+					}
+				}
+				a.profesionalismo{
+					background: #97c93e;
+					padding:1.5em 1em;
+					&:hover{
+						background: #6e922f;
+					}
+				}
+				a.catalogo{
+					background: #010673;
+					padding:1.5em 3.42em;
+					@include desde (tablet){
+						margin-top: 1em;
+					}
+					@include desde (web){
+						margin-top: 0;
+					}
+					&:hover{
+						background:#303494;
+					}
+				}
+				a.beneficios{
+					background: #0f1491;
+					padding:1.5em 3.42em;
+					@include desde (tablet){
+						margin-top: 1em;
+					}
+					@include desde (web){
+						margin-top: 0;
+					}
+					&:hover{
+						background:#010673;
+					}
+				}
+			}
+		}
+	}
+}
+
+section{
+	#menu-beneficios{
+		width: 100%;
+		overflow:hidden;
+		margin-bottom: 2em;
+		ul{
+			list-style: none;
+			padding:0;
+			li{
+				display: inline-block;
+				a{
+					background-color:$pistacho;
+					color:$blanco;
+					text-align:center;
+					padding:8px 21px;
+					text-decoration: none;
+					transition: all .3s;
+					&:hover{
+						background-color:#0c9c94;
+					}
+					span.stock{
+						margin-left: 8px;
+						font-size: 0.9em;
+					}
+				}
+			}
+		}
+	}
+}

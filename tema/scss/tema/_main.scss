@@ -1,0 +1,494 @@
+section{
+	#slider{
+		position:relative;
+		#noticias{
+			width: 230px;
+			height: 300px;
+			@include desde (base){
+				display: none;
+			}
+			@include desde (tablet){
+				height: 200px;
+				display: block;
+			}
+			@include desde (web){
+				height: 300px;
+			}			
+			position:absolute;
+			top:15px;
+			right: 15px;
+			z-index: 99;
+			border:1px solid $blanco;
+			overflow-y:scroll;
+			overflow-x:hidden;
+			background-color: $magenta;
+			h1{
+				font-size: 1em;
+				color: $magenta;
+				background-color: $blanco;
+				margin:0;
+				padding:0.5em;
+				font-weight: $normal;
+				position: absolute;
+				width: 213px;
+				z-index: 0;
+				@include desde (base){
+					width: 230px;
+				}
+				@include desde (tablet){
+					width: 230px;
+				}
+				@include desde (web){
+					width: 213px;
+				}
+			}
+			#noticias-scroll{
+				width: 90%;
+				ul{
+					margin:30px 0 0 0;
+					padding:0;
+					list-style: none;
+					li{
+						padding:8px;
+						border-bottom: 1px solid $blanco;
+						a{
+							color:$blanco;
+							text-align:left;
+							font-size: 0.7em;
+							line-height: 0;
+							text-decoration: none;
+							&:hover{
+								text-decoration: underline;								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//caja busqueda
+
+section#search{
+	text-align: right;
+
+	form#busqueda{
+		@include desde (base){
+			margin-bottom: 1.5em;
+			margin-top: 1em;
+		}
+		@include desde (tablet){
+			margin-bottom: 0;
+		}
+		input[type="text"]{
+			margin-bottom:1em;
+		    padding: 6px 12px;
+		    font-size: 14px;
+		    line-height: 1.428571429;
+		    color: #555;
+		    vertical-align: middle;
+		    background-color: #fff;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+		    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+		    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			@include desde (base){
+				width: 80%;
+			}
+			@include desde (tablet){
+				width: 30%;
+			}
+		}
+		button[type="submit"]{
+		    background: $magenta;
+		    color: $blanco;
+		    border-width: 0px;
+		    padding: 5px 5px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			position: relative;
+			top: -5px;
+		}
+	}
+}
+
+
+//contenido
+
+#main{
+	background:$blanco;
+	padding-bottom:1em;
+	h2{
+		color: $cyan;
+		font-size: 1.15em;
+		margin: 0 0 1em 0;
+		font-weight: $normal;
+	}
+	.widgets{
+		width: 100%;
+		height: auto;
+		h3{
+			background-color:$cyan;
+			color:$blanco;
+			text-align: left;
+			padding:0.5em;
+			font-size: 1em;
+			margin: 0 0 3px 0;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+	}
+	.caja--actividades{
+		width: 100%;
+		height: auto;
+	}
+
+	#content{
+		margin-top: 45px;
+		.titulo-beneficios{
+			color: $azul_corporativo;
+			margin:0 0 35px 0;
+			text-align: left;
+		}
+	//lista ordenada 
+		ol.lista-ordenada{
+			margin: 0px 0px 0px 20px;
+			padding:0;
+			li{
+				color: $gris_oscuro;
+				font-size: 0.9em;
+				margin-bottom: 0.8em;
+			}
+		}
+		#contenido{
+			width: 100%;
+			float: left;
+			margin-top: 2em;		
+			.item--cajas{
+				//width: 48%;
+				//height: 200px;
+				border-top: 1px solid $verde2;
+				border-bottom: 1px solid $verde2;
+				position: relative;
+				padding-top:0.8em;
+				@include desde (base){
+					width: 100%;
+					margin-bottom: 2em;
+				}
+				@include desde (tablet){
+					width: 48%;
+				}
+				h1{
+
+				}
+			}
+				.guia{
+					width: 20%;
+					height: 0.5em;
+					background:$verde2;
+					position: absolute;
+					top: -8px;
+					left: 0;
+					display: block;
+				}
+		h1{
+			font-size: 1em;
+			margin: 0 0 1em 0;
+			font-weight: $normal;
+			color: $gris_oscuro	;
+		}
+
+		button[type="button"]{
+			border:none;
+			background-color:$verde2;
+			color: $blanco;
+			padding: 2px 8px;
+			font-size: 0.9em;
+			float: right;
+			margin-bottom: 1em;
+			transition: all .3s;
+			&:hover{
+				background-color:$verde3;	
+			}
+		}
+
+
+		}//contenido
+
+		//noticias en menu de colores conceptos
+		#titulo-menu-colores{
+			width: 100%;
+			overflow:hidden;
+			margin-bottom: 1em;
+			h1{
+				font-size: 2.2em;
+				color: $azul_corporativo;
+				margin: 0;
+				line-height: 1.8;
+				margin-left: 2em;
+			}
+		}
+		p.texto-conceptos{
+			color:$gris_claro;
+			font-size: 0.95em;
+		}
+
+		#imagen-destacada{
+			padding-bottom:1.5em;
+			h1{
+				color: $azul_corporativo;
+				margin-top: 0;
+			}
+			h2{
+				margin:0.8em 0;
+				color: $azul_corporativo;
+				font-size: 1.6em;
+				font-weight: $bold;
+			}
+			p{
+				color:$gris_claro;
+				font-size: 0.95em;
+			}
+			button[type="submit"]{
+				padding: 5px 12px;
+				background-color:$azul_corporativo;
+				transition: all .3s;
+				color: $blanco;
+				text-align: center;
+				border:none;
+				float: right;
+				margin: 1em 0;
+				font-size: 0.8em;
+				&:hover{
+					background-color:$azul_corporativo_claro;
+				}
+			}
+		}
+	//iframe
+	iframe{
+		background: url(../img/loading.gif) center center no-repeat;
+	}
+
+	//publicaciones anteriores
+
+		#registro_publicaciones{
+			width: 100%;
+			padding-bottom: 2em;
+			h1{
+				color: $azul_corporativo;
+				margin-top: 0;
+				font-size: 1.5em;
+			}
+			p{
+				color: $azul_corporativo;
+			}
+			ul.anteriores{
+				width: 100%;
+				margin:0;
+				padding: 0;
+				li{
+					display: block;
+					margin-bottom: 1em;
+					a{
+						color: $azul_corporativo_claro;
+					}
+				}
+			}
+		}
+
+
+	//contenido para los cupones
+	#contenido-beneficios{
+
+			//cajas beneficios
+			.item--beneficios{
+				width: 100%;
+				//height: 200px;
+				border-top: 1px solid $verde2;
+				border-bottom: 1px solid $verde2;
+				position: relative;
+				padding-top:0.8em;
+				margin-bottom: 1em;
+			}
+			.guia-line{
+				width: 20%;
+				height: 0.5em;
+				background:$verde2;
+				position: absolute;
+				top: -8px;
+				left: 0;
+				display: block;
+			}
+			h1{
+				font-size: 1.1em;
+				margin: 0 0 12px 3px;
+				color: $azul_corporativo;
+			}
+			.titulo-ben-interior{
+				font-size: 1.5em;
+				margin: 0.8em 0;
+			}
+			p.bajada-beneficios{
+				color: $azul_corporativo;
+				text-align: left;
+				font-size: 0.9em;
+				margin: 1em;
+			}
+		a.canjear{
+			padding:0.5em 1em;
+			color: $blanco;
+			background: $naranjo;
+			text-align: center;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration: none;
+			margin-top: 1em;
+			&:hover{
+				background-color:#0c9c94;
+			}
+		}
+		@include desde (web){
+			@include cuadricula(item--beneficios,2,5%);
+		}
+	}//contenido para cupones
+
+
+
+	}//content
+
+
+	//que es subete
+
+	article{
+		width: 100%;
+		overflow:hidden;
+		.box--info1, .box--info2, .box--info3, .box--info4, .box--info5, .box--info6{
+			padding:1em;
+			height: auto;
+			min-height: auto;
+			margin-bottom: 1em;
+			h1{
+				color: $blanco;
+				margin: 0 0 0.5em 0;
+				font-size: 1.5em;
+			}
+			p {
+				color: $blanco;
+			}
+		}
+		.box--info1{
+			background-color: $verde1;
+		}
+		.box--info2{
+			background-color:$naranjo;
+		}
+		.box--info3{
+			background-color: $magenta;
+		}
+		.box--info4{
+			background-color: $cyan;
+		}
+		.box--info5{
+			background-color: $verde2;
+		}
+		.box--info6{
+			background-color: $verde3;
+		}
+	}
+	//
+	article.mini{
+		margin-top: 1em;
+		button{
+			//width: 50%;
+			height: 50%;
+			border:none;
+			-webkit-appearance:none;
+			float: left;
+			background-color:transparent;
+			@include desde (base){
+				width: 100%;
+			}
+			@include desde (tablet){
+				width: 100%;
+			}
+		}
+	}
+
+	//ocultar sidebar en tablet y mobil
+	#sidebar.TB{
+		@include desde (base){
+			display: none;
+		}
+		@include desde (web){
+			display: block;
+		}
+	}
+
+	//titulo galeria
+	h1.tit-gal{
+		color: $azul_corporativo;
+		font-size: 1.5em;
+		text-align: left;
+	}
+
+}//main
+
+//aviso
+#aviso{
+	width: 100%;
+	position:fixed;
+	z-index:99;
+	bottom:0;
+	background-color:$azul_corporativo_claro;
+	border-top:2px solid $azul_corporativo;
+	@include desde (base){
+		display: block;
+		padding:1em;
+	}
+	@include desde (tablet){
+		padding:1.8em 2.5em;
+	}
+	@include desde (web){
+		display: none;
+	}
+	p{
+		color:$blanco;
+		@include desde(base){
+			font-size: 0.8em;
+		}
+	}
+	a.closer{
+		text-decoration: none;
+		position: absolute;
+		right: 20px;
+		top:10px;
+		background: $azul_corporativo none repeat scroll 0% 0%;
+		text-align: center;
+		-webkit-border-radius: 50%;
+		-moz-border-border-radius: 50%;
+		border-radius: 50%;
+		color:$blanco;
+		@include desde (base){
+			width: 20px;
+			height: 20px;
+			right: 10px;
+			line-height: 1.4;
+		}
+		@include desde (tablet){
+			width: 30px;
+			height: 30px;
+			right: 20px;
+			top:10px;
+			line-height: 30px;			
+		}
+	}
+}

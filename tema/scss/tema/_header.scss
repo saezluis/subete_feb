@@ -1,0 +1,198 @@
+body{
+	background:url(../img/bg.jpg) repeat;
+}
+
+
+#strip{
+	background:url(../img/strip.jpg) repeat-x;
+	height:8px;
+	width:100%;
+}
+
+
+header{
+	background:$blanco;
+	position:relative;
+	padding-bottom:2em;
+	#logo{
+		text-align:center;
+		padding:15px 0 0 0;
+	}
+	#logo_royal{
+		position:absolute;
+		width: 126px;
+		height: 71px;
+		top:30%;
+		left:0px;
+		@include desde (base){
+			display: none;
+		}
+		@include desde (tablet){
+			display: block;
+		}
+	}
+	#logo-for-unilever{
+		width: 332px;
+		height: 136px;
+		position:absolute;
+		top:10%;
+		left: 15px;
+		@include desde (base){
+			display: none;
+		}
+		@include desde (tablet){
+			display: block;
+		}
+	}
+	#admin-header{
+		position:absolute;
+
+		//background:red;
+		@include desde (base){
+			top: 10px;
+			right: 20px;
+		}
+		@include desde (tablet){
+			width: 25%;
+			text-align: center;
+			margin-top: 1em;
+			//right: 0;
+			//right: -50px;
+			right: 20px;
+			//top: 42px;	
+
+		}
+		@include desde (web){
+			right: 20px;
+			margin-top: 1em;
+		}
+		#admin--data{
+			float: left;
+			margin-bottom: 1em;
+			@include desde (tablet){
+				float: none;
+			}
+			@include desde (web){
+				float: left;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+				border: 2px solid $verde2;
+				float: left;
+				margin-right: 1em;
+				@include desde (base){
+					display: none;
+				}
+				@include desde (tablet){
+					display: block;
+					float: none;
+					margin: 0 auto;
+					//text-align: center;
+				}
+				@include desde (web){
+					float: left;
+					margin-right: 1em;
+				}
+			}
+			span.nombre_usuario{
+				float: left;
+				margin-top: 10%;
+				color:$gris_claro;
+				display: none;
+				@include desde (tablet){
+					width: 100%;
+					text-align: center;
+					font-size: 0.9em;
+					margin-top: 0;
+					margin-bottom: 1em;
+					margin-top: 1em;
+					//margin-top: 5%;
+					//margin: 0 auto;
+					display: block;
+
+				}
+				@include desde (web){
+					float: left;
+					margin-top: 10%;
+					color:$gris_claro;	
+					width: auto;
+				}
+			} 			
+		}
+
+		#cuenta{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			@include desde (tablet){
+				text-align: center;
+			}
+			@include desde (web){
+				text-align:none;
+			}
+			ul{
+				margin:0;
+				padding:0;
+				list-style: none;
+				li{
+					display: block;
+					@include desde (tablet){
+						display: inline;
+						margin-right:1em; 
+					}
+					@include desde (web){
+						display: inline-block;
+					}
+					a.micuenta{
+						color:$cyan;
+						text-decoration: none;
+						font-size: 0.9em;
+						background: url(../img/icon-user.jpg) no-repeat center left;
+						padding-left: 1.2em;
+						&:hover{
+							color:$verde2;
+						}
+					}
+					a.cerrar{
+						color:$cyan;
+						text-decoration: none;
+						font-size: 0.9em;
+						background: url(../img/icon-off.jpg) no-repeat center left;
+						padding-left: 1.2em;
+						&:hover{
+							color:$verde2;
+						}
+					}
+				}
+			}
+		}
+	}//admin header
+	//botn contacto lateral
+	.btnLateral{
+		background-color:$azul-corporativo;
+		color:$blanco;
+		padding:1em 1.8em;
+		position:fixed;
+		right: -40px;
+		top: 5em;
+		-moz-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		text-decoration: none;
+		transition: all .3s;
+		//border-top:1px solid black;
+		&:hover{
+			background-color:$azul_corporativo_claro;
+		}
+		@include desde (base){
+			display: none;
+		}
+		@include desde (web){
+			display: block;
+		}
+	}
+}
+

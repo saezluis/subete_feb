@@ -1,0 +1,15 @@
+#anchor-tag{
+	width:100%;
+	.item--galeria{
+		
+	}
+	@include desde (base){
+		@include cuadricula (item--galeria,4);
+	}
+	@include desde (tablet){
+		@include cuadricula (item--galeria,4);
+	}
+	@include desde (web){
+		@include cuadricula (item--galeria,4,1%);
+	}
+}

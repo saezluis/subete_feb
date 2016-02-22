@@ -1,0 +1,161 @@
+doctype html
+html(lang="es")
+	head
+		title Seguridad / Súbete
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/estilos.css")
+		script(src="http://code.jquery.com/jquery-1.11.2.min.js")
+		script(src="js/scripts-min.js")
+		//--slide
+		link(rel="stylesheet", href="js/dist/slippry.css")
+		script(src="js/dist/slippry.min.js")
+	body
+		header.grupo
+			.caja.base-100
+				#logo
+					a(href="index.html")
+						img(src="img/logo.png")
+				#logo_royal
+					a(href="http://www.royalrental.cl", target="_blank", alt="Royal Rental")
+						img(src="img/logo_royal.jpg")
+				#admin-header
+					#admin--data
+						img.circulo(src="img/user.jpg")
+						span.nombre_usuario Jorge Ortiz L.
+					#cuenta
+						ul
+							li
+								a.micuenta(href="mi-cuenta.html") Mi cuenta
+							li
+								a.cerrar(href="#") Cerrar
+			.caja.base-100
+				#menu
+					ul
+						li
+							a(href="que-es-subete.html")¿Qué es Súbete?
+						li
+							a(href="videos.html") Videos
+						li
+							a(href="contacto.html") Contacto
+		section.grupo
+			.caja.base-100
+				nav.navegacion
+					ul
+						li
+							a.seguridad(href="#") Seguridad
+						li
+							a.productividad(href="#") Productividad
+						li
+							a.responsabilidad(href="#") Responsabilidad
+						li
+							a.superacion(href="#") Superación
+						li
+							a.optimismo(href="#") Optimismo
+						li
+							a.profesionalismo(href="#") Profesionalismo
+						li
+							a.catalogo(href="#") Catálogo
+						li
+							a.beneficios(href="#") Beneficios
+		section.grupo
+			.caja.base-100
+				#menu-beneficios
+					ul
+						li
+							a(href="#")
+								|Comida
+								span.stock (1)
+						li
+							a(href="#") 
+								|Educación
+								span.stock (11)
+						li
+							a(href="#") 
+								|Entretención
+								span.stock (22)
+						li
+							a(href="#") 
+								|Salud
+								span.stock (33)
+						li
+							a(href="#") 
+								|Seguridad
+								span.stock (44)
+						li
+							a(href="#") 
+								|Servicios
+								span.stock (55)
+						li
+							a(href="#") 
+								|Turismo
+								span.stock (66)
+		section#search.grupo
+			.caja.web-100
+				form#busqueda
+					input(type="text", placeholder="buscar dentro del sitio")
+					button(type="submit") Buscar
+		#main.grupo
+			#sidebar.caja.web-35
+				h2 Estas son las noticias y beneficios para ti
+				.widgets
+					h3 Actividades Súbete
+					.caja--actividades
+						ul#demo2
+							li
+								a(href='#slide1')
+									img(src='img/actividades.jpg', alt="")
+
+							li
+								a(href='#slide2')
+									img(src='img/actividades.jpg', alt='')
+
+							li
+								a(href='#slide3')
+									img(src='img/actividades.jpg', alt='')
+				.widgets
+					h3 Nuevos convenios
+					.caja--actividades
+						ul#convenios
+							li
+								a(href='#slide1')
+									img(src='img/convenios.jpg', alt="")
+
+							li
+								a(href='#slide2')
+									img(src='img/convenios.jpg', alt='')
+
+							li
+								a(href='#slide3')
+									img(src='img/convenios.jpg', alt='')
+
+
+			#content.caja.web-65
+				#contenido-beneficios
+					#foto-principal
+						img(src="img/san-san.jpg")
+					h1.titulo-ben-interior JARDÍN Y SALA CUNA SAN SAN
+					p 20% descuento mensualidad Jardín Infantil (niveles medio menor y mayor) jornada tarde (14.30 a 18.00 horas). Antes $160.000, ahora $128.000 / 25% descuento matrícula jornada completa Jardín Infantil (09.00 a 17.00 horas). Antes $290.000, ahora $217.500. Región Metropolitana 31-12-15. 
+					a.canjear(href="#") Canjear Cupón
+
+
+		footer.total
+			.grupo
+				.caja.web-25
+					#logo--footer
+						a(href="http://www.royalrental.cl", target="_blank")
+							img(src="img/logo--footer.png")
+				.caja.web-25
+				.caja.web-25			
+				.caja.web-25
+					form#footer.right
+						p Escríbenos si tienes  dudas o sugerencias
+						textarea(name='textarea',  placeholder="Escríbenos si tienes  dudas o sugerencias") 
+						button(type="submit") Enviar
+
+
+
+
+
+
+

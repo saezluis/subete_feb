@@ -1,0 +1,148 @@
+doctype html
+html(lang="es")
+	head
+		title Publicaciones anteriores / Súbete
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/estilos.css")
+		script(src="http://code.jquery.com/jquery-1.11.2.min.js")
+		script(src="js/scripts-min.js")
+		//--slide
+		link(rel="stylesheet", href="js/dist/slippry.css")
+		script(src="js/dist/slippry.min.js")
+	body
+		header.grupo
+			.caja.base-100
+				#logo
+					a(href="index.html")
+						img(src="img/logo.png")
+				#logo_royal
+					a(href="http://www.royalrental.cl", target="_blank", alt="Royal Rental")
+						img(src="img/logo_royal.jpg")
+				#admin-header
+					#admin--data
+						img.circulo(src="img/user.jpg")
+						span.nombre_usuario Jorge Ortiz L.
+					#cuenta
+						ul
+							li
+								a.micuenta(href="mi-cuenta.html") Mi cuenta
+							li
+								a.cerrar(href="#") Cerrar
+			.caja.base-100
+				#menu
+					ul
+						li
+							a(href="que-es-subete.html")¿Qué es Súbete?
+						li
+							a(href="videos.html") Videos
+						li
+							a(href="contacto.html") Contacto
+		section.grupo
+			.caja.base-100
+				nav.navegacion
+					ul
+						li
+							a.seguridad(href="#") Seguridad
+						li
+							a.productividad(href="#") Productividad
+						li
+							a.responsabilidad(href="#") Responsabilidad
+						li
+							a.superacion(href="#") Superación
+						li
+							a.optimismo(href="#") Optimismo
+						li
+							a.profesionalismo(href="#") Profesionalismo
+						li
+							a.catalogo(href="#") Catálogo
+						li
+							a.beneficios(href="#") Beneficios
+		section#search.grupo
+			.caja.web-100
+				form#busqueda
+					input(type="text", placeholder="buscar dentro del sitio")
+					button(type="submit") Buscar
+		#main.grupo
+			#sidebar.caja.web-35
+				h2 Estas son las noticias y beneficios para ti
+				.widgets
+					h3 Actividades Súbete
+					.caja--actividades
+						ul#demo2
+							li
+								a(href='#slide1')
+									img(src='img/actividades.jpg', alt="")
+
+							li
+								a(href='#slide2')
+									img(src='img/actividades.jpg', alt='')
+
+							li
+								a(href='#slide3')
+									img(src='img/actividades.jpg', alt='')
+				.widgets
+					h3 Nuevos convenios
+					.caja--actividades
+						ul#convenios
+							li
+								a(href='#slide1')
+									img(src='img/convenios.jpg', alt="")
+
+							li
+								a(href='#slide2')
+									img(src='img/convenios.jpg', alt='')
+
+							li
+								a(href='#slide3')
+									img(src='img/convenios.jpg', alt='')
+
+
+			#content.caja.web-65
+				#registro_publicaciones
+					h1 Búsqueda
+					p hemos encontrado 
+						span 10 
+						| ítems 
+					ul.anteriores
+						li
+							a(href="#") Publicación 1
+						li
+							a(href="#") Publicación 2
+						li
+							a(href="#") Publicación 3
+						li
+							a(href="#") Publicación 4
+						li
+							a(href="#") Publicación 5
+						li
+							a(href="#") Publicación 6
+						li
+							a(href="#") Publicación 7
+						li
+							a(href="#") Publicación 8
+						li
+							a(href="#") Publicación 9
+						li
+							a(href="#") Publicación 10
+
+		footer.total
+			.grupo
+				.caja.web-25
+					#logo--footer
+						a(href="http://www.royalrental.cl", target="_blank")
+							img(src="img/logo--footer.png")
+				.caja.web-25
+				.caja.web-25			
+				.caja.web-25
+					form#footer.right
+						p Escríbenos si tienes  dudas o sugerencias
+						textarea(name='textarea',  placeholder="Escríbenos si tienes  dudas o sugerencias") 
+						button(type="submit") Enviar
+
+
+
+
+
+
+

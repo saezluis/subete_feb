@@ -1,0 +1,114 @@
+[06-Nov-2015 14:22:37 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/mi-cuenta.php on line 49
+[06-Nov-2015 14:25:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/program4/public_html/subete/actualizarDatosUsuario.php:70) in /home/program4/public_html/subete/actualizarDatosUsuario.php on line 114
+[06-Nov-2015 14:26:54 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/program4/public_html/subete/actualizarDatosUsuario.php on line 36
+[06-Nov-2015 15:06:27 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 252
+[06-Nov-2015 16:02:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 253
+[06-Nov-2015 16:02:26 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/mi-cuenta.php on line 213
+[06-Nov-2015 16:02:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 253
+[06-Nov-2015 18:51:46 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 253
+[06-Nov-2015 18:52:20 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 253
+[06-Nov-2015 18:52:26 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 18:52:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[06-Nov-2015 18:52:40 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 18:53:30 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[06-Nov-2015 18:53:38 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[06-Nov-2015 18:53:41 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[06-Nov-2015 18:53:44 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 18:53:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[06-Nov-2015 18:53:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[06-Nov-2015 18:54:01 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[06-Nov-2015 18:55:18 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[06-Nov-2015 18:55:44 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[06-Nov-2015 18:58:22 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[06-Nov-2015 18:58:27 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 18:58:30 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[06-Nov-2015 18:58:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[06-Nov-2015 18:58:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[06-Nov-2015 18:58:40 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[06-Nov-2015 19:00:56 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 19:01:00 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[06-Nov-2015 19:01:06 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[06-Nov-2015 19:01:12 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[06-Nov-2015 21:08:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 253
+[06-Nov-2015 22:08:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[06-Nov-2015 22:08:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[06-Nov-2015 22:08:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[06-Nov-2015 22:08:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[06-Nov-2015 22:08:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[06-Nov-2015 22:08:54 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[06-Nov-2015 22:08:55 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[07-Nov-2015 21:26:15 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/registroUsuario.php on line 12
+[09-Nov-2015 23:03:16 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:9) in /home/program4/public_html/subete/checklogin.php on line 12
+[09-Nov-2015 23:03:18 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:9) in /home/program4/public_html/subete/checklogin.php on line 12
+[09-Nov-2015 23:03:31 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:9) in /home/program4/public_html/subete/checklogin.php on line 12
+[09-Nov-2015 23:03:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/program4/public_html/subete/checklogin.php:9) in /home/program4/public_html/subete/checklogin.php on line 45
+[09-Nov-2015 23:04:26 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:8) in /home/program4/public_html/subete/checklogin.php on line 11
+[09-Nov-2015 23:04:30 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:8) in /home/program4/public_html/subete/checklogin.php on line 11
+[09-Nov-2015 23:04:32 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/program4/public_html/subete/checklogin.php:8) in /home/program4/public_html/subete/checklogin.php on line 11
+[09-Nov-2015 23:04:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/program4/public_html/subete/checklogin.php:8) in /home/program4/public_html/subete/checklogin.php on line 44
+[09-Nov-2015 23:28:45 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/mi-cuenta.php on line 49
+[09-Nov-2015 23:28:46 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/mi-cuenta.php on line 49
+[10-Nov-2015 10:47:36 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/mi-cuenta.php on line 49
+[10-Nov-2015 14:31:41 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 15:27:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 15:33:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 15:34:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 15:35:25 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 15:51:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:34:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:44:38 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:47:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[10-Nov-2015 18:48:22 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:48:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[10-Nov-2015 18:48:37 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:48:40 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[10-Nov-2015 18:48:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:48:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[10-Nov-2015 18:49:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 18:49:03 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[10-Nov-2015 18:49:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[10-Nov-2015 18:49:47 UTC] PHP Warning:  mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (42000/1044): Access denied for user 'program4_admin'@'localhost' to database 'bdcutcl' in /home/program4/public_html/subete/mi-cuenta.php on line 49
+[10-Nov-2015 18:52:10 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[10-Nov-2015 18:52:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 19:01:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 19:13:40 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 20:21:12 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 21:05:37 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 21:47:08 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 21:47:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 21:48:12 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[10-Nov-2015 21:48:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[10-Nov-2015 21:48:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[10-Nov-2015 21:48:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/optimismo.php on line 223
+[10-Nov-2015 21:48:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 222
+[10-Nov-2015 21:48:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[10-Nov-2015 21:48:15 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[10-Nov-2015 21:48:16 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[10-Nov-2015 21:49:28 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 262
+[10-Nov-2015 21:49:31 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/productividad.php on line 223
+[10-Nov-2015 21:49:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/responsabilidad.php on line 222
+[10-Nov-2015 21:49:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/superacion.php on line 222
+[10-Nov-2015 21:49:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 226
+[12-Nov-2015 20:19:35 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/program4/public_html/subete/noticias.php on line 271
+[12-Nov-2015 20:20:05 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/program4/public_html/subete/noticias.php on line 271
+[12-Nov-2015 20:20:12 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/program4/public_html/subete/noticias.php on line 271
+[13-Nov-2015 15:03:23 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 288
+[13-Nov-2015 15:04:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 288
+[13-Nov-2015 15:04:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/mi-cuenta.php on line 225
+[13-Nov-2015 15:04:14 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/mi-cuenta.php on line 225
+[13-Nov-2015 15:04:21 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 288
+[10-Dec-2015 21:32:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 298
+[14-Dec-2015 20:04:13 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 298
+[14-Dec-2015 20:04:16 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 248
+[14-Dec-2015 20:04:26 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 298
+[14-Dec-2015 20:04:27 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 244
+[14-Dec-2015 20:04:29 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/seguridad.php on line 248
+[14-Dec-2015 20:05:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 298
+[14-Dec-2015 20:05:04 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 244
+[14-Dec-2015 20:05:45 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/profesionalismo.php on line 244
+[22-Dec-2015 20:20:39 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 355
+[22-Dec-2015 20:22:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 355
+[22-Dec-2015 20:28:19 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 355
+[28-Dec-2015 13:49:18 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 362
+[28-Dec-2015 14:20:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 362
+[07-Jan-2016 19:15:17 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, string given in /home/program4/public_html/subete/index.php on line 375

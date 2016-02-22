@@ -1,0 +1,534 @@
+//login
+
+header{
+	.arriba{
+		margin:40px 0;
+	}
+	#box--login{
+		background-color:$magenta;
+		overflow:hidden;
+		padding: 2em;
+
+		h1{
+			color:$blanco;
+			font-weight: $normal;
+			font-style: italic;
+			font-size: 1.4em;
+			margin:0;
+		}
+		form#login{
+			width: 100%;
+			height: auto;
+			margin-top: 1em;
+			label{
+				width: 100%;
+				float: left;
+				color:$blanco;
+				margin: 0.4em 0;
+				font-size: 0.9em;
+			}
+			input[type="text"],input[type="password"]{
+				padding:6px;
+				float: left;
+				font-size: 0.8em;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				border:2px solid #9B1F5D;
+				@include desde (base){
+					width: 100%;
+					padding:8px;
+					font-size: 0.9em;
+				}
+				@include desde (web){
+					width: 60%;
+				}
+			}
+			button[type="submit"]{
+				width: 60%;
+				padding:6px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				border-top:none;
+				border-left:none;
+				border-right:none;
+				border-bottom:2px solid #8b0253;
+				margin-top: 1em;
+				background-color:#b8006d;
+				color:$blanco;
+				transition: all .3s;
+					@include desde (base){
+						width: 100%;
+						padding:10px;
+						font-size: 1em;
+						text-transform: uppercase;
+					}
+					@include desde (web){
+						width: 60%;
+						padding:6px;
+					}
+				&:hover{
+					background-color:#8b0253;
+				}
+			}
+			button.recuperar{
+				text-align:right;
+				color:$blanco;
+				border:none;
+				background:none;
+				padding:0;
+				text-decoration: underline;
+				font-weight: $normal;
+				font-style: italic;	
+				font-size: 0.8em;
+				margin-top: 0.8em;
+				&:hover{
+					background:none;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	#box--blue{
+		//height: 435px;
+		height: 235px;
+		background-color: $cyan;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		position:relative;
+		@include desde (movil){
+			//height: 175px;
+		}
+		@include desde (movil-h){
+			height: 315px;
+		}
+		@include desde (tablet){
+			height: 435px;
+		}
+		//@include desde (web){}		
+		#royalito{
+			width: 58%;
+			position:relative;
+
+			img.topR{
+				margin-top:20px;
+				@include desde (tablet){
+					margin-top:80px;
+				}
+			}
+		}
+		#linea_texto{
+			position: absolute;
+			top: 110px;
+			right: 0px;
+			width: 50%;
+			@include desde (movil){}
+			@include desde (tablet){
+				top: 170px;
+				right: 30px;
+			}
+			h2{
+				font-size: 0.8em;
+				color:$blanco;
+				font-weight: $semi-bold;
+				padding:0.6em;
+				margin-bottom: 2px;
+				position: absolute;
+				top: -90px;
+				right: 0;
+				text-align: center;
+				@include desde (movil){
+					top: -70px;
+				}
+				@include desde (movil-h){
+					font-size: 1.1em;
+				}
+				@include desde (tablet){
+					font-size: 1.2em;
+					top: -110px;
+				}
+			}
+		}
+	}
+	//checklogin
+	#box--check{
+		overflow:hidden;
+		padding: 2em;
+		position:relative;
+		#royalito-check{
+			position:relative;
+			width: 90%;
+			text-align: center;
+		}
+		#base--globo{
+			width: 45%;
+			position:absolute;
+			top:170px;
+			right: 0;
+		}
+		p.garabatos{
+			position: absolute;
+			color: #706F6F;
+
+			@include desde (tablet){
+				top: 7.5em;
+				right: -11px;
+				font-size: 1.2em;
+			}
+			@include desde (web){
+				top: 4.5em;
+				right: 0;
+				font-size: 1.8em;	
+			}
+		}
+		p.recuperar{
+			position: absolute;
+			color: #706F6F;
+			top: 7.5em;
+			right: 0px;
+			font-size: 1.2em;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		//ok encuesta
+		#check-verde{
+			position:absolute;
+			@include desde (tablet){
+				right: 40px;
+				top: 100px;
+			}
+			@include desde (web){
+				right: 60px;
+			}
+		}
+	}
+	#alerta{
+
+		@include desde (tablet){
+			margin-top: 21em;
+		}
+		@include desde (web){
+			margin-top: 28em;
+		}
+		h1{
+			color: $gris_oscuro;
+		}
+		p.alarm{
+			color: rgb(63,63,63);
+			padding:1.5em;
+			background-color:rgba(199,7,34,.4);
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			a{
+				color:rgb(161,3,3);
+			}
+		}
+		p.normal-text{
+			font-weight: $bold;
+			color: $gris_oscuro;
+			text-transform: uppercase;
+			font-size: 0.85em;
+		}
+
+		form#rec-contra{
+			background-color:$cyan;
+			padding:1.5em;
+			input[type="text"]{
+				padding:5px;
+				font-size: 0.9em;
+				width: 100%;
+			}
+			button[type="submit"]{
+				background-color:$azul_corporativo;
+				color: $blanco;
+				border: none;
+				padding:6px 8px;
+				transition: all .3s;
+				margin-top: 0.5em;
+				&:hover{
+					background-color:$azul_corporativo_claro;
+				}
+			}
+		}
+	}
+	//boton volver
+		a.ir-encuesta{
+			padding: 8px 12px;
+			background-color:$cyan;
+			text-align: center;
+			color:$blanco;
+			text-transform: uppercase;
+			text-decoration: none;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin-top: 1.5em;
+			float: left;
+		}
+	#box--naranja{
+		form#registrate{
+			text-align: right;
+			//background-color:$naranjo;
+			padding: 0.5em 0.5em 0.5em 0.5em;
+			@include desde (base){
+				background-color:none;
+			}
+			@include desde (web){
+				background-color:$naranjo;
+			}
+			// h2{
+			// 	font-size: 1.2em;
+			// 	color:$blanco;
+			// 	font-weight: $semi-bold;
+			// 	padding:0.6em;
+			// 	margin-bottom: 2px;
+			// }
+			button[type="submit"]{
+				background-color:#a14004;
+				padding:6px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				border-top:none;
+				border-left:none;
+				border-right:none;
+				border-bottom:2px solid #843403;
+				//width: 100%;
+				color: $blanco;
+				text-transform: uppercase;
+				text-align: center;
+				transition: all .3s;
+				&:hover{
+					background-color:#843403;
+				}
+
+				@include desde (tablet){
+					width: 30%;
+					padding:1em;
+				}
+				@include desde (web){
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#content{
+	h4{
+		color:$azul_corporativo;
+		font-size: 1.8em;
+		margin: 0 1em 0 0;
+		float: left;
+		line-height: 2;
+	}
+	.foo{
+		border:2px solid $verde1;
+		float: left;
+		}
+	.limit{
+		width: 60px;
+		height: 60px;
+	}
+	form#perfil{
+		width: 100%;
+		height: auto;
+		margin-top:2em; 
+		float: left;
+		fieldset{
+			width: 100%;
+			position: relative;
+			padding:1.8em 0.1em;  
+			h1{
+				margin: 0;
+				top: -16px;
+				position:absolute;
+				color:$azul_corporativo;
+				background: $blanco;
+				font-size: 1.4em;
+				left: 15px;
+			}
+			label{
+				padding:0.8em 0;
+				color:$azul_oscuro;
+				float: left;
+			}
+			input[type="text"]{
+				width: 100%;
+				padding:4px;
+				font-size: 0.8em;
+			}
+			select.sel{
+				width: 100%;
+			}
+		}
+		fieldset.Cacceso{
+			margin-top: 2.5em;
+			textarea{
+				width: 100%;
+				height:170px;
+				resize: none;
+				padding:8px;
+				font-size: 0.8em;
+			}
+		}
+		button[type="submit"]{
+			background-color: $azul_corporativo_claro;
+			color:$blanco;
+			padding:5px 16px;
+			border: none;
+			margin-top: 1em;
+			transition: all .3s;
+			&:hover{
+				background-color: $azul_corporativo;
+			}
+		}
+	}
+	//contacto
+	form#contact{
+		position:relative;
+		width: 100%;
+		h2{
+			color: #040452;
+			font-size: 1.8em;
+			position: absolute;
+			top: -22px;
+			background-color: $blanco;
+			font-weight: $bold;
+		}
+		label{
+			width: 100%;
+			padding: 0.8em 0px;
+			color: #010673;
+			float: left;
+		}
+		input[type="text"]{
+			width: 100%;
+			padding:5px;
+			font-size: 0.9em;
+		}
+		textarea{
+			width: 100%;
+			height: 190px;
+			padding:5px;
+			font-size: 0.9em;
+		}
+		button[type="submit"]{
+			width: 15%;
+			background-color: #02599C;
+			color: #FFF;
+			padding: 5px 16px;
+			border: medium none;
+			margin-top: 1em;
+			transition: all 0.3s ease 0s;
+			&:hover{
+				background-color: $azul_corporativo;
+			}
+		}
+	}
+}
+
+section{
+	#preguntas{
+		background-color:$blanco;
+		padding:0 15px 15px 15px;
+		form#encuesta{
+			article.color1,article.color2,article.color3,article.color4,article.color5{
+				padding:1em;
+				overflow:hidden;
+				margin-bottom: 1em;
+				p{
+					color:$blanco;
+					font-weight: $bold;
+					text-align: left;
+					font-size: 1.2em;
+					& span{
+						margin-right: 0.5em;
+					}
+				}
+				input[type="radio"]{
+					margin-right: 2em;	
+				}
+				a.btn--enc{
+					color:$blanco;
+					padding:8px 8px;
+					text-align:center;
+					font-weight: $bold;
+					background-color:$azul_corporativo;
+					display: block;
+					margin-bottom: 1em;
+					//width: 10%;
+					font-size: 0.9em;
+					text-decoration: none;
+					position: relative;
+					@include desde (base){
+						width: 30%;
+					}
+					@include desde (tablet){
+						width: 10%;
+					}
+				}
+				#palomita{
+					position:absolute;
+					
+					top: 5px;
+					@include desde (movil){
+						left: 80px;
+						width: 25%;
+					}
+					@include desde (movil-h){
+						left: 90px;
+						width: 35%;
+					}
+					@includem desde (tablet){
+						left: 80px;
+						width: 35%;
+					}
+					@include desde (tablet-h){
+						left: 110px;
+					}
+					@include desde (web){
+						left: 110px;
+					}
+				}
+
+				// .m-b{
+				// 	margin-bottom: 0.5em;
+				// }
+			}
+			article.color1{
+				background-color:$verde1;
+			}
+			article.color2{
+				background-color:$magenta;
+			}
+			article.color3{
+				background-color:$cyan;
+			}
+			article.color4{
+				background-color:$naranjo;
+			}
+			article.color5{
+				background-color:$verde2;
+			}
+			//boton envio
+			button[type="submit"]{
+				padding:5px 12px;
+				color:$blanco;
+				border:none;
+				background-color: $azul_corporativo;
+				&:hover{
+					background-color: $azul_corporativo_claro;
+				}
+				@include desde (tablet){
+					margin:1em;
+					width: 30%;
+					padding: 1em 1.3em;
+				}
+			}
+		}
+	}
+}	

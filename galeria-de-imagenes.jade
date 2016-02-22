@@ -1,0 +1,122 @@
+doctype html
+html(lang="es")
+	head
+		title GAlería de imágenes
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1,maximun-scale=1")
+		link(rel="stylesheet", href="css/estilos.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+		script(src="js/scripts-min.js")
+		//-galeria de imaágenes
+		link(rel="stylesheet", href="js/lightgallery/css/lightgallery.css")
+		script(src="js/lightgallery/js/lightgallery.js")
+		//-lightgallery plugins
+		script(src="js/lightgallery/js/lg-thumbnail.js")
+		script(src="js/lightgallery/js/lg-fullscreen.js")
+
+
+	body
+		header.grupo
+			.caja.base-100
+				#logo
+					a(href="index.html")
+						img(src="img/logo.png")
+				#logo_royal
+					a(href="http://www.royalrental.cl", target="_blank", alt="Royal Rental")
+						img(src="img/logo_royal.jpg")
+				#admin-header
+					#admin--data
+						img.circulo(src="img/user.jpg")
+						span.nombre_usuario Jorge Ortiz L.
+					#cuenta
+						ul
+							li
+								a.micuenta(href="mi-cuenta.html") Mi cuenta
+							li
+								a.cerrar(href="#") Cerrar
+			//- .caja.base-100
+			//- 	#menu
+			//- 		ul
+			//- 			li
+			//- 				a(href="que-es-subete.html")¿Qué es Súbete?
+			//- 			li
+			//- 				a(href="videos.html") Videos
+			//- 			li
+			//- 				a(href="contacto.html") Contacto
+		section.grupo
+			.caja.base-100
+				nav.navegacion
+					ul
+						li
+							a.seguridad(href="#") Seguridad
+						li
+							a.productividad(href="#") Productividad
+						li
+							a.responsabilidad(href="#") Responsabilidad
+						li
+							a.superacion(href="#") Superación
+						li
+							a.optimismo(href="#") Optimismo
+						li
+							a.profesionalismo(href="#") Profesionalismo
+						li
+							a.catalogo(href="#") Catálogo
+						li
+							a.beneficios(href="#") Beneficios
+
+		section#search.grupo
+			.caja.web-100
+				form#busqueda
+					input(type="text", placeholder="buscar dentro del sitio")
+					button(type="submit") Buscar
+		#main.grupo
+			article
+				.caja.web-100
+					h1 SÚBETE A LOS MEJORES MOMENTOS DE EL DÍA DEL OPERARIO 2015 DE ROYAL RENTAL.
+				.caja.web-100
+						//- ul#ul-li
+						//- 	li(data-src='img/1.jpg')
+						//- 		img(src='img/thumb-1.jpg')
+						//- 	li(data-src='img/1.jpg')
+						//- 		img(src='img/thumb-1.jpg')
+					#anchor-tag
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+						a(href="img/1.jpg")
+							img(src="img/thumb-1.jpg")
+
+
+		footer.total
+			.grupo
+				.caja.web-25
+					#logo--footer
+						a(href="http://www.royalrental.cl", target="_blank")
+							img(src="img/logo--footer.png")
+				.caja.web-25
+				.caja.web-25			
+				.caja.web-25
+					form#footer.right
+						p Escríbenos si tienes  dudas o sugerencias
+						textarea(name='textarea',  placeholder="Escríbenos si tienes  dudas o sugerencias") 
+						button(type="submit") Enviar
+script(type='text/javascript').
+	$(document).ready(function() {
+	//$('#anchor-tag').lightGallery();
+		alert("funciona");
+	});
+
+
+
+
+
+
