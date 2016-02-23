@@ -407,9 +407,6 @@ session_start();
 		},
 		grado_escolar_hijo_01: {
 		  required: "#Hijo1:checked"
-		},
-		isapre_hijo_01: {
-		  required: "#Hijo1:checked"
 		}
 	  }
 	});
