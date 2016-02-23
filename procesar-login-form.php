@@ -37,9 +37,10 @@ $cargas = $_REQUEST['cargas_send'];
 
 
 	if($cargas==''){
-		echo "No tiene cargas Familiares";
+		//echo "No tiene cargas Familiares";
+		$trust = "";
 	}else{
-		echo "Si tiene cargas Familiares";
+		//echo "Si tiene cargas Familiares";
 		
 		$nombre_conyuge = $_REQUEST['nombreconyuge'];
 		$apellido_paterno_conyuge = $_REQUEST['apellido_paterno_conyuge'];
@@ -62,9 +63,10 @@ $cargas = $_REQUEST['cargas_send'];
 	
 	$Hijo1 = $_REQUEST['agregarHijo1'];
 	if($Hijo1==''){
-		echo "No tiene hijo 1";
+		//echo "No tiene hijo 1";
+		$trust = "";
 	}else{
-		echo "Si tiene hijo 1";
+		//echo "Si tiene hijo 1";
 
 		$nombre_hijo_01 = $_REQUEST['nombre_hijo_01'];
 		$apellido_paterno_hijo_01 = $_REQUEST['apellido_paterno_hijo_01'];
@@ -88,8 +90,66 @@ $cargas = $_REQUEST['cargas_send'];
 																or die("Problemas con el insert del Hijo1");
 	}
 
-
-
+	$Hijo2 = $_REQUEST['agregarHijo2'];
+	if($Hijo2==''){
+		//echo "No tiene hijo 1";
+		$trust = "";
+	}else{
+		
+		$nombre_hijo_02 = $_REQUEST['nombre_hijo_02'];
+		$apellido_paterno_hijo_02 = $_REQUEST['apellido_paterno_hijo_02'];
+		$apellido_materno_hijo_02 = $_REQUEST['apellido_materno_hijo_02'];
+		$fecha_nacimiento_hijo_02 = $_REQUEST['fecha_nacimiento_hijo_02'];
+		$rut_hijo_02 = $_REQUEST['rut_hijo_02'];
+		$sexo_hijo_02 = $_REQUEST['sexo_hijo_02'];
+		$grado_escolar_hijo_02 = $_REQUEST['grado_escolar_hijo_02'];
+		$isapre_hijo_02 = $_REQUEST['isapre_hijo_02'];
+		
+		mysqli_query($conexion,"INSERT INTO hijos(nombre,apellido_paterno,apellido_materno,fecha_nacimiento,rut,sexo,grado_escolar,carga,id_interno) values 
+																('$nombre_hijo_02',
+																'$apellido_paterno_hijo_02',
+																'$apellido_materno_hijo_02',
+																'$fecha_nacimiento_hijo_02',
+																'$rut_hijo_02',
+																'$sexo_hijo_02',
+																'$grado_escolar_hijo_02',
+																'$isapre_hijo_02',
+																'$rut_usuario')")
+																or die("Problemas con el insert del Hijo2");
+		
+	}
+	
+	$Hijo3 = $_REQUEST['agregarHijo3'];
+	if($Hijo3==''){
+		//echo "No tiene hijo 1";
+		$trust = "";
+	}else{
+	
+		$nombre_hijo_03 = $_REQUEST['nombre_hijo_03'];
+		$apellido_paterno_hijo_03 = $_REQUEST['apellido_paterno_hijo_03'];
+		$apellido_materno_hijo_03 = $_REQUEST['apellido_materno_hijo_03'];
+		$fecha_nacimiento_hijo_03 = $_REQUEST['fecha_nacimiento_hijo_03'];
+		$rut_hijo_03 = $_REQUEST['rut_hijo_03'];
+		$sexo_hijo_03 = $_REQUEST['sexo_hijo_03'];
+		$grado_escolar_hijo_03 = $_REQUEST['grado_escolar_hijo_03'];
+		$isapre_hijo_03 = $_REQUEST['isapre_hijo_03'];
+		
+		mysqli_query($conexion,"INSERT INTO hijos(nombre,apellido_paterno,apellido_materno,fecha_nacimiento,rut,sexo,grado_escolar,carga,id_interno) values 
+																('$nombre_hijo_03',
+																'$apellido_paterno_hijo_03',
+																'$apellido_materno_hijo_03',
+																'$fecha_nacimiento_hijo_03',
+																'$rut_hijo_03',
+																'$sexo_hijo_03',
+																'$grado_escolar_hijo_03',
+																'$isapre_hijo_03',
+																'$rut_usuario')")
+																or die("Problemas con el insert del Hijo3");
+	
+	}
+	
+	
+header('Location: new-login.php');
 
 
 

@@ -102,6 +102,34 @@ session_start();
 				//$('input[name="mynumberfield"]').prop('required',false);        
 			}
 		});
+		
+		$("#Hijo2").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#div3').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#div3').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
+		
+		$("#Hijo3").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#div4').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#div4').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
 			/*
 			$("#opcion1").click(function() {
 				$("#div1").show();
@@ -174,7 +202,7 @@ session_start();
 	$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
 	$acentos = $conexion->query("SET NAMES 'utf8'");
 	
-	$registrosInternos=mysqli_query($conexion,"SELECT * FROM internos WHERE rut = '$rut_sesion'") or die("Problemas en el select:".mysqli_error($conexion));
+	$registrosInternos=mysqli_query($conexion,"SELECT * FROM cuenta WHERE rut = '$rut_sesion'") or die("Problemas en el select:".mysqli_error($conexion));
 	
 	if($reg=mysqli_fetch_array($registrosInternos)){
 		
@@ -328,7 +356,7 @@ session_start();
 				<label>Grado escolar</label>
 				<select name="grado_escolar_hijo_01" id="grado_escolar_hijo_01">
 				  <option value="">Elegir</option>
-				  <option value="Nivel Parvulario">Nivel Parvulario</option>
+				  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
 				  <option value="Nivel Basico">Nivel Básico</option>
 				  <option value="Nivel Medio">Nivel Medio</option>
 				  <option value="Nivel Superior">Nivel Superior</option>
@@ -344,13 +372,147 @@ session_start();
 			  </div>
 			</div>
 			
-			<!--
+			
 			<div id="boton3" class="caja base-100">
-			  <button type="button" value="" value="opcion3" id="opcion3" class="addChild">Agregar otro hijo</button>
+				<input id="Hijo2" type="checkbox" name="agregarHijo2">Agregar un hijo
 			</div>
-			-->
+			
 		
 		</div>
+		
+		<div id="div3">
+		
+			<div class="caja base-100 tablet-50">
+			  <p>Datos Hijo 02</p>
+			</div>
+			<div class="estosDatos">
+			  <div class="caja base-100 tablet-50">
+				<label for="">Nombre</label>
+				<input type="text" id="nombre_hijo_02" name="nombre_hijo_02">
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label>Apellido paterno</label>
+				<input type="text" id="apellido_paterno_hijo_02" name="apellido_paterno_hijo_02">
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label for="">Apellido materno</label>
+				<input type="text" id="apellido_materno_hijo_02" name="apellido_materno_hijo_02">
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label>Fecha de nacimiento</label>
+				<input type="text" id="fecha_nacimiento_hijo_02" name="fecha_nacimiento_hijo_02" placeholder="Formato: AAAA-MM-DD">
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label for="">RUT</label>
+				<input type="text" id="rut_hijo_02" name="rut_hijo_02">
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label>Sexo</label>
+				<select name="sexo_hijo_02" id="sexo_hijo_02">
+				  <option value="">Elegir</option>
+				  <option value="Femenino">Femenino</option>
+				  <option value="Masculino">Masculino</option>
+				</select>
+			  </div>
+			  <div class="caja base-100 tablet-50">
+				<label>Grado escolar</label>
+				<select name="grado_escolar_hijo_02" id="grado_escolar_hijo_02">
+				  <option value="">Elegir</option>
+				  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
+				  <option value="Nivel Básico">Nivel Básico</option>
+				  <option value="Nivel Medio">Nivel Medio</option>
+				  <option value="Nivel Superior">Nivel Superior</option>
+				</select>
+			  </div>
+			  <!--
+			  <div class="caja base-100 tablet-50">
+				<button type="button" value="removeSon02" id="removeSon02" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
+			  </div>
+			  -->
+			  <div class="caja base-100 tablet-50">
+				<label>Carga Isapre / Fonasa</label>
+				<select name="isapre_hijo_02" id="isapre_hijo_02">
+				  <option value="">Elegir</option>
+				  <option value="Isapre">Isapre</option>
+				  <option value="Fonasa">Fonasa</option>
+				</select>
+			  </div>
+			</div>
+			
+			
+			<div id="boton4" class="caja base-100">
+				<input id="Hijo3" type="checkbox" name="agregarHijo3">Agregar un hijo
+			</div>
+			
+		
+		</div>
+		
+		<!-- Hijo 03 -->
+		
+		<div id="div4">
+			
+				<div class="caja base-100 tablet-50">
+				  <p>Datos Hijo 03</p>
+				</div>
+				<div class="estosDatos">
+				  <div class="caja base-100 tablet-50">
+					<label for="">Nombre</label>
+					<input type="text" id="nombre_hijo_03" name="nombre_hijo_03">
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label>Apellido paterno</label>
+					<input type="text" id="apellido_paterno_hijo_03" name="apellido_paterno_hijo_03">
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label for="">Apellido materno</label>
+					<input type="text" id="apellido_materno_hijo_03" name="apellido_materno_hijo_03">
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label>Fecha de nacimiento</label>
+					<input type="text" id="fecha_nacimiento_hijo_03" name="fecha_nacimiento_hijo_03">
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label for="">RUT</label>
+					<input type="text" id="rut_hijo_03" name="rut_hijo_03">
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label>Sexo</label>
+					<select name="sexo_hijo_03" id="sexo_hijo_03">
+					  <option value="">Elegir</option>
+					  <option value="Femenino">Femenino</option>
+					  <option value="Masculino">Masculino</option>
+					</select>
+				  </div>
+				  <div class="caja base-100 tablet-50">
+					<label>Grado escolar</label>
+					<select name="grado_escolar_hijo_03" id="grado_escolar_hijo_03">
+					  <option value="">Elegir</option>
+					  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
+					  <option value="Nivel Básico">Nivel Básico</option>
+					  <option value="Nivel Medio">Nivel Medio</option>
+					  <option value="Nivel Superior">Nivel Superior</option>
+					</select>
+				  </div>
+				  <!--
+				  <div class="caja base-100 tablet-50">
+					<button type="button" value="removeSon03" id="removeSon03" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
+				  </div>
+				  -->
+				  <div class="caja base-100 tablet-50">
+					<label>Carga Isapre / Fonasa</label>
+					<select name="isapre_hijo_03" id="isapre_hijo_03">
+					  <option value="">Elegir</option>
+					  <option value="Isapre">Isapre</option>
+					  <option value="Fonasa">Fonasa</option>
+					</select>
+				  </div>
+				</div>	
+				<!--
+				<div id="boton5" class="caja base-100">
+					<button type="button" value="" value="opcion5" id="opcion5" class="addChild">Agregar otro hijo</button>
+				</div>
+				-->
+			</div>
 		
 	</div>
 		
@@ -367,6 +529,7 @@ session_start();
 	  //debug: true,
 	  success: "valid"
 	});
+	//jQuery.validator.messages.required = "";
 	$( "#myform" ).validate({
 	  rules: {
 		nombreconyuge: {
@@ -407,6 +570,57 @@ session_start();
 		},
 		grado_escolar_hijo_01: {
 		  required: "#Hijo1:checked"
+		},
+		isapre_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		nombre_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		apellido_paterno_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		apellido_materno_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		fecha_nacimiento_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		rut_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		sexo_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		grado_escolar_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		isapre_hijo_02: {
+		  required: "#Hijo2:checked"
+		},
+		nombre_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		apellido_paterno_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		apellido_materno_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		fecha_nacimiento_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		rut_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		sexo_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		grado_escolar_hijo_03: {
+		  required: "#Hijo3:checked"
+		},
+		isapre_hijo_03: {
+		  required: "#Hijo3:checked"
 		}
 	  }
 	});
