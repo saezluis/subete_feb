@@ -249,11 +249,11 @@ session_start();
           <label>Fecha de nacimiento (AAAA-MM-DD)</label>
           <?php echo "<input type=\"text\" value=\"$fecha_nacimiento\" name=\"fecha_nacimiento_usuario\" readonly>"; ?>
         </div>
-        <div class="caja base-100 tablet-50">
+        <div class="caja base-100 tablet-50" style="position:relative;">
           <label>Teléfono / móvil</label>
           <input type="text" name="telefono_usuario" required>
         </div>
-        <div class="caja base-100 tablet-50">
+        <div class="caja base-100 tablet-50" style="position:relative;">
           <label>Mail</label>
           <input type="text" name="mail_usuario" required>
         </div>
@@ -261,11 +261,11 @@ session_start();
           <label>Área de trabajo</label>
           <?php echo "<input type=\"text\" value=\"$seccion\" name=\"area_trabajo_usuario\" readonly>"; ?>
         </div>
-        <div class="caja base-100 tablet-50">
+        <div class="caja base-100 tablet-50" style="position:relative;">
           <label>Ingresa tu nueva contraseña</label>
           <input id="clave01" type="password" name="password" required>
         </div>
-        <div class="caja base-100 tablet-50">
+        <div class="caja base-100 tablet-50" style="position:relative;">
           <label>Repite tu nueva contraseña</label>
           <input id="clave02" type="password" name="password_repetir" onfocusout = "return validarClaves(); " required>
         </div>
@@ -284,29 +284,29 @@ session_start();
           <p>Datos cónyuge</p>
         </div>
         <div class="estosDatos">
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label for="">Nombre</label>
             <input type="text" id="nombreconyuge" name="nombreconyuge" > 
           </div>
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label>Apellido paterno</label>
-            <input type="text" id="apellido_paterno_conyuge" name="apellido_paterno_conyuge">
+            <input type="text" id="apellido_paterno_conyuge" name="apellido_paterno_conyuge" >
           </div>
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label for="">Apellido materno</label>
-            <input type="text" id="apellido_materno_conyuge" name="apellido_materno_conyuge">
+            <input type="text" id="apellido_materno_conyuge" name="apellido_materno_conyuge" >
           </div>
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label>Fecha de nacimiento</label>
-            <input type="text" id="fecha_nacimiento_conyuge" name="fecha_nacimiento_conyuge" placeholder="Formato: AAAA-MM-DD">
+            <input type="text" id="fecha_nacimiento_conyuge" name="fecha_nacimiento_conyuge" placeholder="Formato: AAAA-MM-DD" >
           </div>
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label for="">RUT</label>
-            <input type="text" id="rut_conyuge" name="rut_conyuge">
+            <input type="text" id="rut_conyuge" name="rut_conyuge" >
           </div>
-          <div class="caja base-100 tablet-50">
+          <div class="caja base-100 tablet-50" style="position:relative;">
             <label>Carga Isapre / Fonasa</label>
-            <select name="isapre_conyuge" id="isapre_conyuge">
+            <select name="isapre_conyuge" id="isapre_conyuge" >
               <option value="">Elegir</option>
 			  <option value="Isapre">Isapre</option>
 			  <option value="Fonasa">Fonasa</option>
@@ -320,19 +320,19 @@ session_start();
 		
 		<div id="divX">
 		
-			<div class="caja base-100 tablet-50">
+			<div class="caja base-100 tablet-50" style="position:relative;">
 			  <p>Datos Hijo 01</p>
 			</div>
 			<div class="estosDatos">
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">Nombre</label>
 				<input type="text" id="nombre_hijo_01" name="nombre_hijo_01">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Apellido paterno</label>
 				<input type="text" id="apellido_paterno_hijo_01" name="apellido_paterno_hijo_01">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">Apellido materno</label>
 				<input type="text" id="apellido_materno_hijo_01" name="apellido_materno_hijo_01">
 			  </div>
@@ -340,11 +340,11 @@ session_start();
 				<label>Fecha de nacimiento</label>
 				<input type="text" id="fecha_nacimiento_hijo_01" name="fecha_nacimiento_hijo_01" placeholder="Formato: AAAA-MM-DD">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">RUT</label>
 				<input type="text" id="rut_hijo_01" name="rut_hijo_01">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Sexo</label>
 				<select name="sexo_hijo_01" id="sexo_hijo_01">
 				  <option value="">Elegir</option>
@@ -352,7 +352,7 @@ session_start();
 				  <option value="Masculino">Masculino</option>
 				</select>
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Grado escolar</label>
 				<select name="grado_escolar_hijo_01" id="grado_escolar_hijo_01">
 				  <option value="">Elegir</option>
@@ -362,7 +362,7 @@ session_start();
 				  <option value="Nivel Superior">Nivel Superior</option>
 				</select>
 			  </div>			 
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Carga Isapre / Fonasa</label>
 				<select name="isapre_hijo_01" id="isapre_hijo_01">
 				  <option value="">Elegir</option>
@@ -382,31 +382,31 @@ session_start();
 		
 		<div id="div3">
 		
-			<div class="caja base-100 tablet-50">
+			<div class="caja base-100 tablet-50" style="position:relative;">
 			  <p>Datos Hijo 02</p>
 			</div>
 			<div class="estosDatos">
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">Nombre</label>
 				<input type="text" id="nombre_hijo_02" name="nombre_hijo_02">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Apellido paterno</label>
 				<input type="text" id="apellido_paterno_hijo_02" name="apellido_paterno_hijo_02">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">Apellido materno</label>
 				<input type="text" id="apellido_materno_hijo_02" name="apellido_materno_hijo_02">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Fecha de nacimiento</label>
 				<input type="text" id="fecha_nacimiento_hijo_02" name="fecha_nacimiento_hijo_02" placeholder="Formato: AAAA-MM-DD">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label for="">RUT</label>
 				<input type="text" id="rut_hijo_02" name="rut_hijo_02">
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Sexo</label>
 				<select name="sexo_hijo_02" id="sexo_hijo_02">
 				  <option value="">Elegir</option>
@@ -414,7 +414,7 @@ session_start();
 				  <option value="Masculino">Masculino</option>
 				</select>
 			  </div>
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Grado escolar</label>
 				<select name="grado_escolar_hijo_02" id="grado_escolar_hijo_02">
 				  <option value="">Elegir</option>
@@ -429,7 +429,7 @@ session_start();
 				<button type="button" value="removeSon02" id="removeSon02" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
 			  </div>
 			  -->
-			  <div class="caja base-100 tablet-50">
+			  <div class="caja base-100 tablet-50" style="position:relative;">
 				<label>Carga Isapre / Fonasa</label>
 				<select name="isapre_hijo_02" id="isapre_hijo_02">
 				  <option value="">Elegir</option>
@@ -451,31 +451,31 @@ session_start();
 		
 		<div id="div4">
 			
-				<div class="caja base-100 tablet-50">
+				<div class="caja base-100 tablet-50" style="position:relative;">
 				  <p>Datos Hijo 03</p>
 				</div>
 				<div class="estosDatos">
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label for="">Nombre</label>
 					<input type="text" id="nombre_hijo_03" name="nombre_hijo_03">
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label>Apellido paterno</label>
 					<input type="text" id="apellido_paterno_hijo_03" name="apellido_paterno_hijo_03">
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label for="">Apellido materno</label>
 					<input type="text" id="apellido_materno_hijo_03" name="apellido_materno_hijo_03">
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label>Fecha de nacimiento</label>
 					<input type="text" id="fecha_nacimiento_hijo_03" name="fecha_nacimiento_hijo_03">
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label for="">RUT</label>
 					<input type="text" id="rut_hijo_03" name="rut_hijo_03">
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label>Sexo</label>
 					<select name="sexo_hijo_03" id="sexo_hijo_03">
 					  <option value="">Elegir</option>
@@ -483,7 +483,7 @@ session_start();
 					  <option value="Masculino">Masculino</option>
 					</select>
 				  </div>
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label>Grado escolar</label>
 					<select name="grado_escolar_hijo_03" id="grado_escolar_hijo_03">
 					  <option value="">Elegir</option>
@@ -498,7 +498,7 @@ session_start();
 					<button type="button" value="removeSon03" id="removeSon03" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
 				  </div>
 				  -->
-				  <div class="caja base-100 tablet-50">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
 					<label>Carga Isapre / Fonasa</label>
 					<select name="isapre_hijo_03" id="isapre_hijo_03">
 					  <option value="">Elegir</option>
