@@ -25,9 +25,14 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="js/scripts-min.js"></script>
-	
+    <!--
+	<script src="js/scripts-min.js"></script>
+	-->
 	<script src="js/jquery-2.2.0.min.js"></script>
+	
+	
+	<link rel="stylesheet" href="site-demos.css">
+	
 	
 	<script>
 	
@@ -35,6 +40,7 @@ session_start();
 	
 	$(document).ready(function() {
 	
+		
 		$("#div2").hide();
 		$("#div3").hide();
 		$("#div4").hide();
@@ -42,6 +48,7 @@ session_start();
 		$("#div6").hide();
 		$("#divX").hide();
 		
+		/*
 		$("#removeSon01").click(function() {
 			$("#divX").hide();
 			$("#botonX").show();
@@ -66,17 +73,48 @@ session_start();
 			$("#div6").hide();
 			$("#boton6").show();
 		});
+		*/
 		
+		$("#cargas").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#div2').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#div2').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
+		
+		$("#Hijo1").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#divX').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#divX').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
+			/*
 			$("#opcion1").click(function() {
 				$("#div1").show();
 				$("#div2").hide();
 			});
-	 
+			*/
+			/*
 			$("#opcion2").click(function() {
 				$("#div1").hide();
 				$("#div2").show();
 			});
-			
+			*/
+			/*
 			$("#opcion3").click(function() {
 				$("#boton3").hide();			
 				$("#div3").show();
@@ -96,12 +134,14 @@ session_start();
 				$("#boton6").hide();			
 				$("#div6").show();
 			});
+			*/
 			
-			$("#opcionX").click(function() {
+			/*
+			$("#Hijo1").click(function() {
 				$("#botonX").hide();			
 				$("#divX").show();
 			});
-		
+			*/
 	});
 	
 	</script>
@@ -121,22 +161,6 @@ session_start();
 			}			
 		}
 		
-		function validarCargaFamiliar() {
-		
-			//var cargaSi = document.getElementById("opcion1").value;
-			//var cargaNo = document.getElementById("opcion2").value;
-			
-			if(document.getElementById('opcion1').checked) {
-				return true;
-			}	
-			else if(document.getElementById('opcion2').checked) {
-				return true;
-			} else {
-				alert("Debe seleccionar una opción en cargas familiares");
-				return false;
-			}
-			
-		}
 	
 	</script>
 	
@@ -178,7 +202,7 @@ session_start();
         </div>
       </div>
     </header>
-    <form method="POST" action="procesar-login-form.php" class="Formulario-registro grupo">
+    <form id="myform" method="POST" action="procesar-login-form.php" class="Formulario-registro grupo">
       <fieldset>
         <p>Para comenzar, completa tus datos<span class="numerales circulo">1</span></p>
         <div class="caja base-100 tablet-50">
@@ -222,16 +246,8 @@ session_start();
       <fieldset>
         <p>Datos de cargas familiares (opcional)<span class="numerales circulo">2</span></p>
 		
-		<!--
-		<input type="radio" name="opciones" value="opcion1" id="opcion1"> Opción 1
-		<input type="radio" name="opciones" value="opcion2" id="opcion2"> Opción 2
-		-->
-		
-        <div class="caja base-100">
-          <input type="radio" name="opciones" value="opcion1" id="opcion1"><span class="Rbutt">No tengo cargas familiares</span>
-        </div>
-        <div class="caja base-100">
-          <input type="radio" name="opciones" value="opcion2" id="opcion2"><span class="Rbutt">Tengo cargas familiares</span>
+        <div class="caja base-100">			
+          <input id="cargas" type="checkbox" name="cargas_send" ><span class="Rbutt">Tengo cargas familiares</span>
         </div>
 
 	<div id="div2">
@@ -242,28 +258,28 @@ session_start();
         <div class="estosDatos">
           <div class="caja base-100 tablet-50">
             <label for="">Nombre</label>
-            <input type="text" name="nombre_conyuge">
+            <input type="text" id="nombreconyuge" name="nombreconyuge" > 
           </div>
           <div class="caja base-100 tablet-50">
             <label>Apellido paterno</label>
-            <input type="text" name="apellido_paterno_conyuge">
+            <input type="text" id="apellido_paterno_conyuge" name="apellido_paterno_conyuge">
           </div>
           <div class="caja base-100 tablet-50">
             <label for="">Apellido materno</label>
-            <input type="text" name="apellido_materno_conyuge">
+            <input type="text" id="apellido_materno_conyuge" name="apellido_materno_conyuge">
           </div>
           <div class="caja base-100 tablet-50">
             <label>Fecha de nacimiento</label>
-            <input type="text" name="fecha_nacimiento_conyuge" placeholder="Formato: AAAA-MM-DD">
+            <input type="text" id="fecha_nacimiento_conyuge" name="fecha_nacimiento_conyuge" placeholder="Formato: AAAA-MM-DD">
           </div>
           <div class="caja base-100 tablet-50">
             <label for="">RUT</label>
-            <input type="text" name="rut_conyuge">
+            <input type="text" id="rut_conyuge" name="rut_conyuge">
           </div>
           <div class="caja base-100 tablet-50">
             <label>Carga Isapre / Fonasa</label>
-            <select name="isapre_conyuge">
-              <option value="-1">Elegir</option>
+            <select name="isapre_conyuge" id="isapre_conyuge">
+              <option value="">Elegir</option>
 			  <option value="Isapre">Isapre</option>
 			  <option value="Fonasa">Fonasa</option>
             </select>
@@ -271,7 +287,7 @@ session_start();
         </div>
 		
 		<div id="botonX" class="caja base-100">
-			  <button type="button" value="" value="opcionX" id="opcionX" class="addChild">Agregar un hijo</button>
+			  <input id="Hijo1" type="checkbox" name="agregarHijo1">Agregar un hijo
 		</div>
 		
 		<div id="divX">
@@ -282,313 +298,121 @@ session_start();
 			<div class="estosDatos">
 			  <div class="caja base-100 tablet-50">
 				<label for="">Nombre</label>
-				<input type="text" name="nombre_hijo_01">
+				<input type="text" id="nombre_hijo_01" name="nombre_hijo_01">
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label>Apellido paterno</label>
-				<input type="text" name="apellido_paterno_hijo_01">
+				<input type="text" id="apellido_paterno_hijo_01" name="apellido_paterno_hijo_01">
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label for="">Apellido materno</label>
-				<input type="text" name="apellido_materno_hijo_01">
+				<input type="text" id="apellido_materno_hijo_01" name="apellido_materno_hijo_01">
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label>Fecha de nacimiento</label>
-				<input type="text" name="fecha_nacimiento_hijo_01" placeholder="Ejemplo: 01-01-1990">
+				<input type="text" id="fecha_nacimiento_hijo_01" name="fecha_nacimiento_hijo_01" placeholder="Formato: AAAA-MM-DD">
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label for="">RUT</label>
-				<input type="text" name="rut_hijo_01">
+				<input type="text" id="rut_hijo_01" name="rut_hijo_01">
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label>Sexo</label>
-				<select name="sexo_hijo_01">
-				  <option value="-1">Elegir</option>
+				<select name="sexo_hijo_01" id="sexo_hijo_01">
+				  <option value="">Elegir</option>
 				  <option value="Femenino">Femenino</option>
 				  <option value="Masculino">Masculino</option>
 				</select>
 			  </div>
 			  <div class="caja base-100 tablet-50">
 				<label>Grado escolar</label>
-				<select name="grado_escolar_hijo_01">
-				  <option value="-1">Elegir</option>
+				<select name="grado_escolar_hijo_01" id="grado_escolar_hijo_01">
+				  <option value="">Elegir</option>
 				  <option value="Nivel Parvulario">Nivel Parvulario</option>
 				  <option value="Nivel Basico">Nivel Básico</option>
 				  <option value="Nivel Medio">Nivel Medio</option>
 				  <option value="Nivel Superior">Nivel Superior</option>
 				</select>
-			  </div>			  
-			  <div class="caja base-100 tablet-50">
-				<button type="button" value="removeSon01" id="removeSon01" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
-			  </div>
+			  </div>			 
 			  <div class="caja base-100 tablet-50">
 				<label>Carga Isapre / Fonasa</label>
-				<select name="isapre_hijo_01">
-				  <option value="-1">Elegir</option>
+				<select name="isapre_hijo_01" id="isapre_hijo_01">
+				  <option value="">Elegir</option>
 				  <option value="Isapre">Isapre</option>
 				  <option value="Fonasa">Fonasa</option>
 				</select>
 			  </div>
 			</div>
 			
+			<!--
 			<div id="boton3" class="caja base-100">
 			  <button type="button" value="" value="opcion3" id="opcion3" class="addChild">Agregar otro hijo</button>
 			</div>
+			-->
 		
 		</div>
 		
-		<div id="div3">
-		
-			<div class="caja base-100 tablet-50">
-			  <p>Datos Hijo 02</p>
-			</div>
-			<div class="estosDatos">
-			  <div class="caja base-100 tablet-50">
-				<label for="">Nombre</label>
-				<input type="text" name="nombre_hijo_02">
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label>Apellido paterno</label>
-				<input type="text" name="apellido_paterno_hijo_02">
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label for="">Apellido materno</label>
-				<input type="text" name="apellido_materno_hijo_02">
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label>Fecha de nacimiento</label>
-				<input type="text" name="fecha_nacimiento_hijo_02">
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label for="">RUT</label>
-				<input type="text" name="rut_hijo_02">
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label>Sexo</label>
-				<select name="sexo_hijo_02">
-				  <option value="-1">Elegir</option>
-				  <option value="Femenino">Femenino</option>
-				  <option value="Masculino">Masculino</option>
-				</select>
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label>Grado escolar</label>
-				<select name="grado_escolar_hijo_02">
-				  <option value="-1">Elegir</option>
-				  <option value="Nivel Parvulario">Nivel Parvulario</option>
-				  <option value="Nivel Básico">Nivel Básico</option>
-				  <option value="Nivel Medio">Nivel Medio</option>
-				  <option value="Nivel Superior">Nivel Superior</option>
-				</select>
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<button type="button" value="removeSon02" id="removeSon02" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
-			  </div>
-			  <div class="caja base-100 tablet-50">
-				<label>Carga Isapre / Fonasa</label>
-				<select name="isapre_hijo_02">
-				  <option value="-1">Elegir</option>
-				  <option value="Isapre">Isapre</option>
-				  <option value="Fonasa">Fonasa</option>
-				</select>
-			  </div>
-			</div>
-			
-			<div id="boton4" class="caja base-100">
-				<button type="button" value="" value="opcion4" id="opcion4" class="addChild">Agregar otro hijo</button>
-			</div>
-		
-		</div>
-		
-			<div id="div4">
-			
-				<div class="caja base-100 tablet-50">
-				  <p>Datos Hijo 03</p>
-				</div>
-				<div class="estosDatos">
-				  <div class="caja base-100 tablet-50">
-					<label for="">Nombre</label>
-					<input type="text" name="nombre_hijo_03">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Apellido paterno</label>
-					<input type="text" name="apellido_paterno_hijo_03">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">Apellido materno</label>
-					<input type="text" name="apellido_materno_hijo_03">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Fecha de nacimiento</label>
-					<input type="text" name="fecha_nacimiento_hijo_03">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">RUT</label>
-					<input type="text" name="rut_hijo_03">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Sexo</label>
-					<select name="sexo_hijo_03">
-					  <option value="-1">Elegir</option>
-					  <option value="Femenino">Femenino</option>
-					  <option value="Masculino">Masculino</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Grado escolar</label>
-					<select name="grado_escolar_hijo_03">
-					  <option value="-1">Elegir</option>
-					  <option value="Nivel Parvulario">Nivel Parvulario</option>
-					  <option value="Nivel Básico">Nivel Básico</option>
-					  <option value="Nivel Medio">Nivel Medio</option>
-					  <option value="Nivel Superior">Nivel Superior</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<button type="button" value="removeSon03" id="removeSon03" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Carga Isapre / Fonasa</label>
-					<select name="isapre_hijo_03">
-					  <option value="-1">Elegir</option>
-					  <option value="Isapre">Isapre</option>
-					  <option value="Fonasa">Fonasa</option>
-					</select>
-				  </div>
-				</div>	
-				
-				<div id="boton5" class="caja base-100">
-					<button type="button" value="" value="opcion5" id="opcion5" class="addChild">Agregar otro hijo</button>
-				</div>
-			
-			</div>
-			
-			
-			<div id="div5">
-			
-				<div class="caja base-100 tablet-50">
-				  <p>Datos Hijo 04</p>
-				</div>
-				<div class="estosDatos">
-				  <div class="caja base-100 tablet-50">
-					<label for="">Nombre</label>
-					<input type="text" name="nombre_hijo_04">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Apellido paterno</label>
-					<input type="text" name="apellido_paterno_hijo_04">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">Apellido materno</label>
-					<input type="text" name="apellido_materno_hijo_04">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Fecha de nacimiento</label>
-					<input type="text" name="fecha_nacimiento_hijo_04">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">RUT</label>
-					<input type="text" name="rut_hijo_04"> 
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Sexo</label>
-					<select name="sexo_hijo_04">
-					  <option value="-1">Elegir</option>
-					  <option value="Femenino">Femenino</option>
-					  <option value="Masculino">Masculino</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Grado escolar</label>
-					<select name="grado_escolar_hijo_04">
-					  <option value="-1">Elegir</option>
-					  <option value="Nivel Parvulario">Nivel Parvulario</option>
-					  <option value="Nivel Básico">Nivel Básico</option>
-					  <option value="Nivel Medio">Nivel Medio</option>
-					  <option value="Nivel Superior">Nivel Superior</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<button type="button" value="removeSon04" id="removeSon04" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Carga Isapre / Fonasa</label>
-					<select name="isapre_hijo_04">
-					  <option value="-1">Elegir</option>
-					  <option value="Isapre">Isapre</option>
-					  <option value="Fonasa">Fonasa</option>
-					</select>
-				  </div>
-				</div>	
-				
-				<div id="boton6" class="caja base-100">
-					<button type="button" value="" value="opcion6" id="opcion6" class="addChild">Agregar otro hijo</button>
-				</div>			
-			</div>
-			
-			<div id="div6">
-				
-				<div class="caja base-100 tablet-50">
-				  <p>Datos Hijo 05</p>
-				</div>
-				<div class="estosDatos">
-				  <div class="caja base-100 tablet-50">
-					<label for="">Nombre</label>
-					<input type="text" name="nombre_hijo_05">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Apellido paterno</label>
-					<input type="text" name="apellido_paterno_hijo_05">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">Apellido materno</label>
-					<input type="text" name="apellido_materno_hijo_05">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Fecha de nacimiento</label>
-					<input type="text" name="fecha_nacimiento_hijo_05">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label for="">RUT</label>
-					<input type="text" name="rut_hijo_05">
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Sexo</label>
-					<select name="sexo_hijo_05">
-					  <option value="-1">Elegir</option>
-					  <option value="Femenino">Femenino</option>
-					  <option value="Masculino">Masculino</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Grado escolar</label>
-					<select name="grado_escolar_hijo_05">
-					  <option value="-1">Elegir</option>
-					  <option value="Nivel Parvulario">Nivel Parvulario</option>
-					  <option value="Nivel Básico">Nivel Básico</option>
-					  <option value="Nivel Medio">Nivel Medio</option>
-					  <option value="Nivel Superior">Nivel Superior</option>
-					</select>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<button type="button" value="removeSon05" id="removeSon05" style="background-color: transparent;" ><img src="img/list_remove.png" height="30px" width="35px"></button>
-				  </div>
-				  <div class="caja base-100 tablet-50">
-					<label>Carga Isapre / Fonasa</label>
-					<select name="isapre_hijo_05">
-					  <option value="-1">Elegir</option>
-					  <option value="Isapre">Isapre</option>
-					  <option value="Fonasa">Fonasa</option>
-					</select>
-				  </div>				  
-				</div>			
-			</div>		
 	</div>
 		
         <div class="caja base-100">
-          <input type="submit" value="Registrase" class="reg" onclick="return validarCargaFamiliar(); ">
+          <input type="submit" value="Registrase" class="reg" >
         </div>
       </fieldset>
-    </form>
+    </form>	
+	<script src="jquery.validate.min.js"></script>
+	<script src="additional-methods.min.js"></script>
+	<script>
+	// just for the demos, avoids form submit
+	jQuery.validator.setDefaults({
+	  //debug: true,
+	  success: "valid"
+	});
+	$( "#myform" ).validate({
+	  rules: {
+		nombreconyuge: {
+		  required: "#cargas:checked"
+		},
+		apellido_paterno_conyuge: {
+		  required: "#cargas:checked"
+		},
+		apellido_materno_conyuge: {
+		  required: "#cargas:checked"
+		},
+		fecha_nacimiento_conyuge: {
+		  required: "#cargas:checked"
+		},
+		rut_conyuge: {
+		  required: "#cargas:checked"
+		},
+		isapre_conyuge: {
+		  required: "#cargas:checked"
+		},
+		nombre_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		apellido_paterno_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		apellido_materno_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		fecha_nacimiento_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		rut_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		sexo_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		grado_escolar_hijo_01: {
+		  required: "#Hijo1:checked"
+		},
+		isapre_hijo_01: {
+		  required: "#Hijo1:checked"
+		}
+	  }
+	});
+</script>
   </body>
 </html>
