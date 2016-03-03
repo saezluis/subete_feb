@@ -25,15 +25,15 @@ if($password!=$password_repetir){
 	echo "Error: Las claves no coinciden";
 	echo "<a href=\"new-login.php\">Volver</a>";
 }else{
-	echo "Testing y no actualiza aún";
-	/*
+	//echo "Testing y no actualiza aún";
+	
 	mysqli_query($conexion, "UPDATE cuenta SET telefono='$telefono_usuario' , email='$mail_usuario' , password = '$password_repetir' , postRegistro = 'si' ,
 									sistema_web = 'interno' , foto_perfil = 'user.jpg' WHERE rut='$rut_usuario' ") or
 									die("Problemas en el select:".mysqli_error($conexion));
-									*/
+									
 }
 	
-$cargas = $_REQUEST['cargas_send'];
+$cargas = @$_REQUEST['cargas_send'];
 
 
 	if($cargas==''){
@@ -61,7 +61,7 @@ $cargas = $_REQUEST['cargas_send'];
 																or die("Problemas con el insert de conyuge");
 	}
 	
-	$Hijo1 = $_REQUEST['agregarHijo1'];
+	$Hijo1 = @$_REQUEST['agregarHijo1'];
 	if($Hijo1==''){
 		//echo "No tiene hijo 1";
 		$trust = "";
@@ -90,7 +90,7 @@ $cargas = $_REQUEST['cargas_send'];
 																or die("Problemas con el insert del Hijo1");
 	}
 
-	$Hijo2 = $_REQUEST['agregarHijo2'];
+	$Hijo2 = @$_REQUEST['agregarHijo2'];
 	if($Hijo2==''){
 		//echo "No tiene hijo 1";
 		$trust = "";
@@ -119,7 +119,7 @@ $cargas = $_REQUEST['cargas_send'];
 		
 	}
 	
-	$Hijo3 = $_REQUEST['agregarHijo3'];
+	$Hijo3 = @$_REQUEST['agregarHijo3'];
 	if($Hijo3==''){
 		//echo "No tiene hijo 1";
 		$trust = "";
@@ -149,86 +149,68 @@ $cargas = $_REQUEST['cargas_send'];
 	}
 	
 	
+	$Hijo4 = @$_REQUEST['agregarHijo4'];
+	if($Hijo4==''){
+		//echo "No tiene hijo 1";
+		$trust = "";
+	}else{
+	
+		$nombre_hijo_04 = $_REQUEST['nombre_hijo_04'];
+		$apellido_paterno_hijo_04 = $_REQUEST['apellido_paterno_hijo_04'];
+		$apellido_materno_hijo_04 = $_REQUEST['apellido_materno_hijo_04'];
+		$fecha_nacimiento_hijo_04 = $_REQUEST['fecha_nacimiento_hijo_04'];
+		$rut_hijo_04 = $_REQUEST['rut_hijo_04'];
+		$sexo_hijo_04 = $_REQUEST['sexo_hijo_04'];
+		$grado_escolar_hijo_04 = $_REQUEST['grado_escolar_hijo_04'];
+		$isapre_hijo_04 = $_REQUEST['isapre_hijo_04'];
+		
+		mysqli_query($conexion,"INSERT INTO hijos(nombre,apellido_paterno,apellido_materno,fecha_nacimiento,rut,sexo,grado_escolar,carga,id_interno) values 
+																('$nombre_hijo_04',
+																'$apellido_paterno_hijo_04',
+																'$apellido_materno_hijo_04',
+																'$fecha_nacimiento_hijo_04',
+																'$rut_hijo_04',
+																'$sexo_hijo_04',
+																'$grado_escolar_hijo_04',
+																'$isapre_hijo_04',
+																'$rut_usuario')")
+																or die("Problemas con el insert del Hijo4");
+	
+	}
+	
+	
+	$Hijo5 = @$_REQUEST['agregarHijo5'];
+	if($Hijo5==''){
+		//echo "No tiene hijo 1";
+		$trust = "";
+	}else{
+	
+		$nombre_hijo_05 = $_REQUEST['nombre_hijo_05'];
+		$apellido_paterno_hijo_05 = $_REQUEST['apellido_paterno_hijo_05'];
+		$apellido_materno_hijo_05 = $_REQUEST['apellido_materno_hijo_05'];
+		$fecha_nacimiento_hijo_05 = $_REQUEST['fecha_nacimiento_hijo_05'];
+		$rut_hijo_05 = $_REQUEST['rut_hijo_05'];
+		$sexo_hijo_05 = $_REQUEST['sexo_hijo_05'];
+		$grado_escolar_hijo_05 = $_REQUEST['grado_escolar_hijo_05'];
+		$isapre_hijo_05 = $_REQUEST['isapre_hijo_05'];
+		
+		mysqli_query($conexion,"INSERT INTO hijos(nombre,apellido_paterno,apellido_materno,fecha_nacimiento,rut,sexo,grado_escolar,carga,id_interno) values 
+																('$nombre_hijo_05',
+																'$apellido_paterno_hijo_05',
+																'$apellido_materno_hijo_05',
+																'$fecha_nacimiento_hijo_05',
+																'$rut_hijo_05',
+																'$sexo_hijo_05',
+																'$grado_escolar_hijo_05',
+																'$isapre_hijo_05',
+																'$rut_usuario')")
+																or die("Problemas con el insert del Hijo5");
+	
+	}
+	
 header('Location: new-login.php');
 
 
-
-
-
-/*
-if($opciones=='opcion2'){
-	
-		//Datos Conyuge:
-
-	
-
-	//Datos hijo 01:
-
-	
-
-	//Aqui comienza el codigo para insertar en BBDD
-
-		if($nombre_hijo_01!=''){
-			mysqli_query($conexion,"INSERT INTO hijo(aqui van los campos de la BBDD) values 
-																('$nombre_hijo_01',
-																'$apellido_paterno_hijo_01',
-																'$apellido_materno_hijo_01',
-																'$fecha_nacimiento_hijo_01',
-																'$rut_hijo_01',
-																'$sexo_hijo_01',
-																'$grado_escolar_hijo_01',
-																'$isapre_hijo_01')")
-					or die("Problemas con el insert de los servicios");
-			//aqui hago el insert del hijo
-		}else{
-			//aqui descargo los warning de php
-		}
-}
-*/
-
-/*
-	$nombre_hijo_02 = $_REQUEST['nombre_hijo_02'];
-	$apellido_paterno_hijo_02 = $_REQUEST['apellido_paterno_hijo_02'];
-	$apellido_materno_hijo_02 = $_REQUEST['apellido_materno_hijo_02'];
-	$fecha_nacimiento_hijo_02 = $_REQUEST['fecha_nacimiento_hijo_02'];
-	$rut_hijo_02 = $_REQUEST['rut_hijo_02'];
-	$sexo_hijo_02 = $_REQUEST['sexo_hijo_02'];
-	$grado_escolar_hijo_02 = $_REQUEST['grado_escolar_hijo_02'];
-	$isapre_hijo_02 = $_REQUEST['isapre_hijo_02'];
-
-	//Datos hijo 03:
-
-	$nombre_hijo_03 = $_REQUEST['nombre_hijo_03'];
-	$apellido_paterno_hijo_03 = $_REQUEST['apellido_paterno_hijo_03'];
-	$apellido_materno_hijo_03 = $_REQUEST['apellido_materno_hijo_03'];
-	$fecha_nacimiento_hijo_03 = $_REQUEST['fecha_nacimiento_hijo_03'];
-	$rut_hijo_03 = $_REQUEST['rut_hijo_03'];
-	$sexo_hijo_03 = $_REQUEST['sexo_hijo_03'];
-	$grado_escolar_hijo_03 = $_REQUEST['grado_escolar_hijo_03'];
-	$isapre_hijo_03 = $_REQUEST['isapre_hijo_03'];
-
-	//Datos hijo 04:
-
-	$nombre_hijo_04 = $_REQUEST['nombre_hijo_04'];
-	$apellido_paterno_hijo_04 = $_REQUEST['apellido_paterno_hijo_04'];
-	$apellido_materno_hijo_04 = $_REQUEST['apellido_materno_hijo_04'];
-	$fecha_nacimiento_hijo_04 = $_REQUEST['fecha_nacimiento_hijo_04'];
-	$rut_hijo_04 = $_REQUEST['rut_hijo_04'];
-	$sexo_hijo_04 = $_REQUEST['sexo_hijo_04'];
-	$grado_escolar_hijo_04 = $_REQUEST['grado_escolar_hijo_04'];
-	$isapre_hijo_04 = $_REQUEST['isapre_hijo_04'];
-
-	//Datos hijo 05:
-
-	$nombre_hijo_05 = $_REQUEST['nombre_hijo_05'];
-	$apellido_paterno_hijo_05 = $_REQUEST['apellido_paterno_hijo_05'];
-	$apellido_materno_hijo_05 = $_REQUEST['apellido_materno_hijo_05'];
-	$fecha_nacimiento_hijo_05 = $_REQUEST['fecha_nacimiento_hijo_05'];
-	$rut_hijo_05 = $_REQUEST['rut_hijo_05'];
-	$sexo_hijo_05 = $_REQUEST['sexo_hijo_05'];
-	$grado_escolar_hijo_05 = $_REQUEST['grado_escolar_hijo_05'];
-	$isapre_hijo_05 = $_REQUEST['isapre_hijo_05'];
-*/
 
 ?>			
 	

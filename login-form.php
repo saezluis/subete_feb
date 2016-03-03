@@ -130,6 +130,34 @@ session_start();
 				//$('input[name="mynumberfield"]').prop('required',false);        
 			}
 		});
+		
+		$("#Hijo4").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#div5').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#div5').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
+		
+		$("#Hijo5").click(function () {
+			if ($(this).prop('checked') === true) {
+				$('#div6').show();
+				//$('#mynumberfield').show();
+				//$('input[name="mytextfield"]').prop('required',true);
+				//$('input[name="mynumberfield"]').prop('required',true);
+			} else {
+				$('#div6').hide();
+				//$('#mynumberfield').hide();
+				//$('input[name="mytextfield"]').prop('required',false);
+				//$('input[name="mynumberfield"]').prop('required',false);        
+			}
+		});
 			/*
 			$("#opcion1").click(function() {
 				$("#div1").show();
@@ -356,6 +384,7 @@ session_start();
 				<label>Grado escolar</label>
 				<select name="grado_escolar_hijo_01" id="grado_escolar_hijo_01">
 				  <option value="">Elegir</option>
+				  <option value="Bebes e infantes">Bebés e Infantes</option>
 				  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
 				  <option value="Nivel Basico">Nivel Básico</option>
 				  <option value="Nivel Medio">Nivel Medio</option>
@@ -418,6 +447,7 @@ session_start();
 				<label>Grado escolar</label>
 				<select name="grado_escolar_hijo_02" id="grado_escolar_hijo_02">
 				  <option value="">Elegir</option>
+				  <option value="Bebes e infantes">Bebés e Infantes</option>
 				  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
 				  <option value="Nivel Básico">Nivel Básico</option>
 				  <option value="Nivel Medio">Nivel Medio</option>
@@ -487,6 +517,7 @@ session_start();
 					<label>Grado escolar</label>
 					<select name="grado_escolar_hijo_03" id="grado_escolar_hijo_03">
 					  <option value="">Elegir</option>
+					  <option value="Bebes e infantes">Bebés e Infantes</option>
 					  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
 					  <option value="Nivel Básico">Nivel Básico</option>
 					  <option value="Nivel Medio">Nivel Medio</option>
@@ -507,12 +538,132 @@ session_start();
 					</select>
 				  </div>
 				</div>	
-				<!--
+				
 				<div id="boton5" class="caja base-100">
-					<button type="button" value="" value="opcion5" id="opcion5" class="addChild">Agregar otro hijo</button>
+					<input id="Hijo4" type="checkbox" name="agregarHijo4">Agregar un hijo
 				</div>
-				-->
+				
 			</div>
+			
+			
+			<div id="div5">
+			
+				<div class="caja base-100 tablet-50" style="position:relative;">
+				  <p>Datos Hijo 04</p>
+				</div>
+				<div class="estosDatos">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">Nombre</label>
+					<input type="text" id="nombre_hijo_04" name="nombre_hijo_04">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Apellido paterno</label>
+					<input type="text" id="apellido_paterno_hijo_04" name="apellido_paterno_hijo_04">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">Apellido materno</label>
+					<input type="text" id="apellido_materno_hijo_04" name="apellido_materno_hijo_04">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Fecha de nacimiento</label>
+					<input type="text" id="fecha_nacimiento_hijo_04" name="fecha_nacimiento_hijo_04">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">RUT</label>
+					<input type="text" id="rut_hijo_04" name="rut_hijo_04"> 
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Sexo</label>
+					<select name="sexo_hijo_04" id="sexo_hijo_04">
+					  <option value="">Elegir</option>
+					  <option value="Femenino">Femenino</option>
+					  <option value="Masculino">Masculino</option>
+					</select>
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Grado escolar</label>
+					<select name="grado_escolar_hijo_04" id="grado_escolar_hijo_04">
+					  <option value="">Elegir</option>
+					  <option value="Bebes e infantes">Bebés e Infantes</option>
+					  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
+					  <option value="Nivel Básico">Nivel Básico</option>
+					  <option value="Nivel Medio">Nivel Medio</option>
+					  <option value="Nivel Superior">Nivel Superior</option>
+					</select>
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Carga Isapre / Fonasa</label>
+					<select name="isapre_hijo_04" id="isapre_hijo_04">
+					  <option value="">Elegir</option>
+					  <option value="Isapre">Isapre</option>
+					  <option value="Fonasa">Fonasa</option>
+					</select>
+				  </div>
+				</div>	
+				
+				<div id="boton6" class="caja base-100">
+					<input id="Hijo5" type="checkbox" name="agregarHijo5">Agregar un hijo
+				</div>			
+				
+			</div>
+			
+			
+			<div id="div6">
+				
+				<div class="caja base-100 tablet-50" style="position:relative;">
+				  <p>Datos Hijo 05</p>
+				</div>
+				<div class="estosDatos">
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">Nombre</label>
+					<input type="text" id="nombre_hijo_05" name="nombre_hijo_05">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Apellido paterno</label>
+					<input type="text" id="apellido_paterno_hijo_05" name="apellido_paterno_hijo_05">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">Apellido materno</label>
+					<input type="text" id="apellido_materno_hijo_05" name="apellido_materno_hijo_05">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Fecha de nacimiento</label>
+					<input type="text" id="fecha_nacimiento_hijo_05" name="fecha_nacimiento_hijo_05">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label for="">RUT</label>
+					<input type="text" id="rut_hijo_05" name="rut_hijo_05">
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Sexo</label>
+					<select name="sexo_hijo_05" id="sexo_hijo_05">
+					  <option value="">Elegir</option>
+					  <option value="Femenino">Femenino</option>
+					  <option value="Masculino">Masculino</option>
+					</select>
+				  </div>
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Grado escolar</label>
+					<select name="grado_escolar_hijo_05" id="grado_escolar_hijo_05">
+					  <option value="">Elegir</option>
+					  <option value="Bebes e infantes">Bebés e Infantes</option>
+					  <option value="Nivel Pre-basico">Nivel Pre-básico</option>
+					  <option value="Nivel Básico">Nivel Básico</option>
+					  <option value="Nivel Medio">Nivel Medio</option>
+					  <option value="Nivel Superior">Nivel Superior</option>
+					</select>
+				  </div>				  
+				  <div class="caja base-100 tablet-50" style="position:relative;">
+					<label>Carga Isapre / Fonasa</label>
+					<select name="isapre_hijo_05" id="isapre_hijo_05">
+					  <option value="">Elegir</option>
+					  <option value="Isapre">Isapre</option>
+					  <option value="Fonasa">Fonasa</option>
+					</select>
+				  </div>				  
+				</div>			
+			</div>
+			
 		
 	</div>
 		
@@ -621,6 +772,54 @@ session_start();
 		},
 		isapre_hijo_03: {
 		  required: "#Hijo3:checked"
+		},
+		nombre_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		apellido_paterno_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		apellido_materno_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		fecha_nacimiento_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		rut_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		sexo_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		grado_escolar_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		isapre_hijo_04: {
+		  required: "#Hijo4:checked"
+		},
+		nombre_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		apellido_paterno_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		apellido_materno_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		fecha_nacimiento_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		rut_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		sexo_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		grado_escolar_hijo_05: {
+		  required: "#Hijo5:checked"
+		},
+		isapre_hijo_05: {
+		  required: "#Hijo5:checked"
 		}
 	  }
 	});
