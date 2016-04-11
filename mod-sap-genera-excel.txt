@@ -1,0 +1,11 @@
+escojer el rango de fechas
+colocar un boton que diga enviar datos OC
+colocar un campo de email a donde quieren que se vaya la info
+
+validar que la primera fecha sea inferior a la otra fecha
+sino enviar mensaje de error
+
+select * from ordenes where fecha between '2016-01-01' and '2016-01-31' order by fecha asc;
+
+luego de tener el rango de fechas debo contar la cantidad de registros que envia de vuelta
+la cantidad de registros va a ser el valor para iterar en la generacion de la tabla

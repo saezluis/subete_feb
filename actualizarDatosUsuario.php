@@ -81,6 +81,7 @@
 	$comuna = $_REQUEST['comuna'];
 	$email = $_REQUEST['email'];
 	$temas_interes = $_REQUEST['temas_interes'];
+	$area_trabajo = $_REQUEST['seccion'];
 	$fotoPerfil = $nombreFoto;
 	
 	$hash = md5("45!$32d".$rut);
@@ -105,13 +106,85 @@
 									email='$email',
 									password='$pass',
 									temas_interes='$temas_interes',
+									seccion='$area_trabajo',
 									foto_perfil='$fotoPerfil'
 									where rut='$rut'") or
 									die("Problemas en el select:".mysqli_error($conexion));
+		
+		@$nombre_conyuge = $_REQUEST['nombre_conyuge'];
+		@$apellido_paterno_conyuge = $_REQUEST['apellido_paterno_conyuge'];
+		@$apellido_materno_conyuge = $_REQUEST['apellido_materno_conyuge'];
+		@$fecha_nacimiento_conyuge = $_REQUEST['fecha_nacimiento_conyuge'];
+		@$rut_conyuge = $_REQUEST['rut_conyuge'];
+		@$carga_conyuge = $_REQUEST['carga_conyuge'];
+		
+		if(@$nombre_conyuge!=''){
+			
+			mysqli_query($conexion, "update conyuge
+									set nombre='$nombre_conyuge',
+										apellido_paterno='$apellido_paterno_conyuge',
+										apellido_materno='$apellido_materno_conyuge',
+										fecha_nacimiento='$fecha_nacimiento_conyuge',
+										rut='$rut_conyuge',										
+										carga='$carga_conyuge'
+										where id_interno='$rut'") or
+										die("Problemas en el select de conyuge".mysqli_error($conexion));
+		}
+		
+		//Trabajar en el actualizar hijos
+		$contador_hijos = $_REQUEST['contador_hijos'];
+		
+		$varX_son = 0;
+		
+		for ($x = 1; $x <= $contador_hijos; $x++) {
+			//echo "Hijo: $x <br>";
+			$varX_son = $varX_son + 1;
+			
+			$id_son = 'id_son'.$x;
+			$id_son_put = $_REQUEST[$id_son];
+			
+			$nameVar_son = "nameson".$varX_son;
+			$nombre_hijo = $_REQUEST[$nameVar_son];
+			
+			$apellidoPa_son = "apellidoPa".$varX_son;
+			$apellido_paterno_hijo = $_REQUEST[$apellidoPa_son];
+			
+			$apellidoMa_son = "apellidoMa".$varX_son;
+			$apellido_materno_hijo = $_REQUEST[$apellidoMa_son];
+			
+			$fechaNA_son = "fechaNA_son".$varX_son;
+			$fecha_nacimiento_hijo = $_REQUEST[$fechaNA_son];
+			
+			$rut_son = "rut_son".$varX_son;
+			$rut_hijo = $_REQUEST[$rut_son];
+			
+			$sexo_son = "sexo_son".$varX_son;
+			$sexo_hijo = $_REQUEST[$sexo_son];
+			
+			$grado_son = "grado_son".$varX_son;
+			$grado_hijo = $_REQUEST[$grado_son];
+			
+			$carga_son = "carga_son".$varX_son;
+			$carga_hijo = $_REQUEST[$carga_son];
+			
+			mysqli_query($conexion, "update hijos
+									set nombre='$nombre_hijo',
+										apellido_paterno='$apellido_paterno_hijo',
+										apellido_materno='$apellido_materno_hijo',
+										fecha_nacimiento='$fecha_nacimiento_hijo',
+										rut='$rut_hijo',
+										sexo='$sexo_hijo',
+										grado_escolar='$grado_hijo',
+										carga='$carga_hijo'
+										where id_hijo='$id_son_put'") or
+										die("Problemas en el select de conyuge".mysqli_error($conexion));
+		}
+		
 
-	//echo "Datos Actualizados";			
+	echo "Datos Actualizados";
 
-	header('Location: http://www.programasubete.cl/subete/mi-cuenta.php');
+	header('Location: mi-cuenta.php');
+	//header('Location: http://www.programasubete.cl/subete/mi-cuenta.php');
 
 	
 ?>

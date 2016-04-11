@@ -77,6 +77,8 @@ exit;
 			$temas_interes = $reg['temas_interes'];
 			$foto_perfil = $reg['foto_perfil'];
 			$comunaUser = $reg['comuna_residencia'];
+			
+			$seccion = $reg['seccion'];
 		
 		}
 			
@@ -301,11 +303,17 @@ exit;
               <label>Teléfono / móvil</label>
               <?php echo "<input name=\"telefono\" value=\"$telefono\" type=\"text\">"; ?>
             </div>
-            <div class="caja web-70">
+			
+			<div class="caja web-30">
+				<label>Mail</label>
+				<?php echo "<input name=\"email\" value=\"$email\" type=\"text\">"; ?>
+            </div>
+			
+            <div class="caja web-40">
               <label>Comuna residencia</label>
 					<select name="comuna" class="sel">
 						<?php
-						while($reg=mysqli_fetch_array($registrosComuna)){					
+						while($reg=mysqli_fetch_array($registrosComuna)){
 							$nombreComuna = $reg['COMUNA_NOMBRE'];	
 							
 							if ($nombreComuna === $comunaUser) {
@@ -317,12 +325,172 @@ exit;
 						?>
 					</select>
             </div>
-			<div class="caja web-70">
+			
+			<div class="caja web-100">
 				<label>Seleccione foto para cargar: </label>
 				<input type="file" name="fileToUpload" id="fileToUpload">
 				<?php echo "<input name=\"fotoPerfil_send\" value=\"$foto_perfil\" type=\"text\" hidden=hidden>"; ?>
 			</div>
+			
+			<div class="caja web-100">
+              <label>Área de trabajo</label>
+              <?php echo "<input name=\"seccion\" value=\"$seccion\" type=\"text\">"; ?>
+            </div>
+			
           </fieldset>
+		  
+		  <?php
+		  if($sistema_web=='interno'){
+			
+			$varX_son = 0;
+			
+			$registrosConyuge = mysqli_query($conexion, "SELECT * FROM conyuge WHERE id_interno = '$rut' ");			
+			$contarConyuge = mysqli_num_rows($registrosConyuge);
+		  
+			//echo "num conyuge: ".$contarConyuge;
+			//echo "<br>";
+			
+			if ($contarConyuge==1){			
+				
+				if($reg=mysqli_fetch_array($registrosConyuge)){
+					$nombre_conyuge = $reg['nombre'];
+					$apellido_paterno_conyuge = $reg['apellido_paterno'];
+					$apellido_materno_conyuge = $reg['apellido_materno'];
+					$fecha_nacimiento_conyuge = $reg['fecha_nacimiento'];
+					$rut_conyuge = $reg['rut'];
+					$carga_conyuge = $reg['carga'];					
+				}
+				
+				  echo "<fieldset class=\"Cacceso\">";
+						echo "<h1>Cónyuge</h1>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>Nombre</label>";
+						  echo "<input type=\"text\" value=\"$nombre_conyuge\" name=\"nombre_conyuge\">";
+						echo "</div>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>Apellido paterno</label>";
+						  echo "<input type=\"text\" value=\"$apellido_paterno_conyuge\" name=\"apellido_paterno_conyuge\" >";
+						echo "</div>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>Apellido materno</label>";
+						  echo "<input type=\"text\" value=\"$apellido_materno_conyuge\" name=\"apellido_materno_conyuge\" >";
+						echo "</div>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>Fecha de nacimiento</label>";
+						  echo "<input type=\"text\" value=\"$fecha_nacimiento_conyuge\" name=\"fecha_nacimiento_conyuge\" >";
+						echo "</div>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>RUT</label>";
+						  echo "<input type=\"text\" value=\"$rut_conyuge\" name=\"rut_conyuge\" >";
+						echo "</div>";
+						echo "<div class=\"caja web-50\">";
+						  echo "<label>Carga Isapre / Fonasa</label>";
+						  echo "<select class=\"sel\" name=\"carga_conyuge\">";
+							if($carga_conyuge=='Isapre'){
+								echo "<option value=\"Isapre\" selected=selected>Isapre</option>";
+								echo "<option value=\"Fonasa\">Fonasa</option>";
+							}
+							if($carga_conyuge=='Fonasa'){
+								echo "<option value=\"Isapre\">Isapre</option>";
+								echo "<option value=\"Fonasa\" selected=selected >Fonasa</option>";
+							}							
+						  echo "</select>";
+						echo "</div>";
+				  echo "</fieldset>";
+			  }
+			  
+			  $registrosHijos = mysqli_query($conexion, "SELECT * FROM hijos WHERE id_interno = '$rut' ");
+			  $contarHijos = mysqli_num_rows($registrosHijos);
+			  
+				if($contarHijos!=0){
+					
+					while($reg=mysqli_fetch_array($registrosHijos)){
+						
+						$varX_son = $varX_son + 1;
+						$nameVar_son = "nameson".$varX_son;
+						$apellidoPa_son = "apellidoPa".$varX_son;
+						$apellidoMa_son = "apellidoMa".$varX_son;
+						$fechaNA_son = "fechaNA_son".$varX_son;
+						$rut_son = "rut_son".$varX_son;
+						$sexo_son = "sexo_son".$varX_son;
+						$grado_son = "grado_son".$varX_son;
+						$id_son = "id_son".$varX_son;
+						$carga_son = "carga_son".$varX_son;
+						
+						
+						$id_hijo = $reg['id_hijo'];
+						$nombre_hijo = $reg['nombre'];
+						$apellido_paterno_hijo = $reg['apellido_paterno'];
+						$apellido_materno_hijo = $reg['apellido_materno'];
+						$fecha_nacimiento_hijo = $reg['fecha_nacimiento'];
+						$rut_hijo = $reg['rut'];
+						$sexo_hijo = $reg['sexo'];
+						$grado_escolar_hijo = $reg['grado_escolar'];
+						$carga_hijo = $reg['carga'];						
+						
+						echo "<input type=\"text\" value=\"$id_hijo\" name=\"$id_son\" hidden=hidden>";
+						
+						echo "<fieldset class=\"Cacceso\">";
+						
+							echo "<h1>Hijo $varX_son</h1>";
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Nombre</label>";
+							  echo "<input type=\"text\" value=\"$nombre_hijo\" name=\"$nameVar_son\">";
+							echo "</div>";
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Apellido paterno</label>";
+							  echo "<input type=\"text\" value=\"$apellido_paterno_hijo\" name=\"$apellidoPa_son\" >";
+							echo "</div>";
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Apellido materno</label>";
+							  echo "<input type=\"text\" value=\"$apellido_materno_hijo\" name=\"$apellidoMa_son\" >";
+							echo "</div>";
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Fecha de nacimiento</label>";
+							  echo "<input type=\"text\" value=\"$fecha_nacimiento_hijo\" name=\"$fechaNA_son\" >";
+							echo "</div>";
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>RUT</label>";
+							  echo "<input type=\"text\" value=\"$rut_hijo\" name=\"$rut_son\">";
+							echo "</div>";
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Sexo</label>";
+							  echo "<input type=\"text\" value=\"$sexo_hijo\" name=\"$sexo_son\">";
+							echo "</div>";	
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Grado escolar</label>";
+							  echo "<input type=\"text\" value=\"$grado_escolar_hijo\" name=\"$grado_son\" >";
+							echo "</div>";	
+							
+							echo "<div class=\"caja web-50\">";
+							  echo "<label>Carga Isapre / Fonasa</label>";
+							  echo "<select class=\"sel\" name=\"$carga_son\">";
+								if($carga_hijo=='Isapre'){
+									echo "<option value=\"Isapre\" selected=selected>Isapre</option>";
+									echo "<option value=\"Fonasa\">Fonasa</option>";
+								}
+								if($carga_hijo=='Fonasa'){
+									echo "<option value=\"Isapre\">Isapre</option>";
+									echo "<option value=\"Fonasa\" selected=selected >Fonasa</option>";
+								}	
+							  echo "</select>";
+							echo "</div>";
+							
+						echo "</fieldset>";
+					}
+				}
+			  
+		  }  
+		 ?>
+		  
+		
+		  
           <fieldset class="Cacceso">
             <h1>Cuenta de acceso</h1>
             <div class="caja web-100">
@@ -338,6 +506,7 @@ exit;
 			  <?php echo "<input name=\"reTypePass\" value=\"$pass\" type=\"text\">"; ?>
             </div>
           </fieldset>
+		  
           <fieldset class="Cacceso">
             <h1>Temas de interés</h1>
             <div class="caja web-100">
@@ -345,6 +514,9 @@ exit;
               <?php echo "<textarea name=\"temas_interes\">$temas_interes</textarea>"; ?>
             </div>
           </fieldset>
+			<?php 
+				echo "<input type=\"text\" value=\"$contarHijos\" name=\"contador_hijos\" hidden=hidden>";
+			?>
           <button type="submit" onClick="alert('Sus datos fueron actualizados')">Guardar</button>
         </form>
       </div>

@@ -208,7 +208,7 @@ $cargas = @$_REQUEST['cargas_send'];
 	
 	}
 	
-header('Location: new-login.php');
+header('Location: login.php');
 
 
 
