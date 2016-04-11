@@ -114,7 +114,9 @@ session_start();
 				echo "<div class=\"caja tablet-50 web-50\">";
 					echo "<div id=\"alerta\">";
 						echo "<h1>Algo ocurrió mal :(</h1>";
-						echo "<p class=\"alarm\">Tu correo o contraseña está incorrecta, haz click <a href=\"login.php\">aquí  </a>para volver a intentarlo.</p>";
+						echo "<p class=\"alarm\">Tu correo o contraseña está incorrecta, haz click <a href=\"login.php\">aquí </a> para volver a intentarlo.<br>
+						Si no puedes iniciar sesión o no estas inscrito, rellena <a href=\"inscribete.php\">este formulario.</a>";
+
 					echo "</div>";
 				echo "</div>";
 			echo "</header>";

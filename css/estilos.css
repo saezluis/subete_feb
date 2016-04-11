@@ -2001,10 +2001,85 @@ header #box--login {
       header #box--login h1 {
         float: left;
         margin-left: 85px; } }
+  header #box--login h2.insc_log {
+    margin: 0;
+    width: 100%;
+    color: #fff;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4em; }
+    @media screen and (min-width: 768px) {
+      header #box--login h2.insc_log {
+        width: 38%;
+        float: left; } }
+  header #box--login form#logindos {
+    width: 100%;
+    height: auto;
+    margin-top: 1em; }
+    @media screen and (min-width: 768px) {
+      header #box--login form#logindos {
+        float: left;
+        width: 60%;
+        margin-top: 0; } }
+    header #box--login form#logindos label {
+      width: 100%;
+      float: left;
+      color: #fff;
+      margin: 0.4em 0;
+      font-size: 0.9em; }
+    header #box--login form#logindos input[type="text"], header #box--login form#logindos input[type="password"] {
+      padding: 6px;
+      float: left;
+      font-size: 0.8em;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border: 2px solid #9B1F5D; }
+      @media screen and (min-width: 320px) {
+        header #box--login form#logindos input[type="text"], header #box--login form#logindos input[type="password"] {
+          width: 100%;
+          padding: 8px;
+          font-size: 0.9em; } }
+      @media screen and (min-width: 1025px) {
+        header #box--login form#logindos input[type="text"], header #box--login form#logindos input[type="password"] {
+          width: 100%; } }
+    header #box--login form#logindos button[type="submit"] {
+      width: 60%;
+      padding: 6px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #8b0253;
+      margin-top: 1em;
+      background-color: #b8006d;
+      color: #fff;
+      transition: all .3s; }
+      @media screen and (min-width: 320px) {
+        header #box--login form#logindos button[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          font-size: 1em;
+          text-transform: uppercase; } }
+      @media screen and (min-width: 1025px) {
+        header #box--login form#logindos button[type="submit"] {
+          width: 100%;
+          padding: 6px; } }
+      header #box--login form#logindos button[type="submit"]:hover {
+        background-color: #8b0253; }
   header #box--login form#login {
     width: 100%;
     height: auto;
     margin-top: 1em; }
+    @media screen and (min-width: 1025px) {
+      header #box--login form#login {
+        width: 60%;
+        height: auto;
+        margin-top: 1em;
+        float: left;
+        margin-left: 5%; } }
     @media screen and (min-width: 1400px) {
       header #box--login form#login {
         width: 60%;

@@ -31,8 +31,83 @@ header{
 			}
 
 		}
+		h2.insc_log{
+			margin:0;
+			width: 100%;
+			color:$blanco;
+			font-weight: $normal;
+			font-style: italic;
+			font-size: 1.4em;
+			@include desde (tablet){
+				width: 38%;
+				float: left;
+			}
+		}
+		
+		form#logindos{
+			width: 100%;
+			height: auto;
+			margin-top: 1em;
+			@include desde (tablet){
+				float: left;
+				width: 60%;
+				margin-top:0;
+			}
+			label{
+				width: 100%;
+				float: left;
+				color:$blanco;
+				margin: 0.4em 0;
+				font-size: 0.9em;
+			}
+			input[type="text"],input[type="password"]{
+				padding:6px;
+				float: left;
+				font-size: 0.8em;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				border:2px solid #9B1F5D;
+				@include desde (base){
+					width: 100%;
+					padding:8px;
+					font-size: 0.9em;
+				}
+				@include desde (web){
+					width: 100%;//60
+				}
+			}
+			button[type="submit"]{
+				width: 60%;
+				padding:6px;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				border-top:none;
+				border-left:none;
+				border-right:none;
+				border-bottom:2px solid #8b0253;
+				margin-top: 1em;
+				background-color:#b8006d;
+				color:$blanco;
+				transition: all .3s;
+					@include desde (base){
+						width: 100%;
+						padding:10px;
+						font-size: 1em;
+						text-transform: uppercase;
+					}
+					@include desde (web){
+						width: 100%;//60
+						padding:6px;
+					}
+				&:hover{
+					background-color:#8b0253;
+				}
+			}
+		}
 
-
+	
 		// h1{
 		// 	color:$blanco;
 		// 	font-weight: $normal;
@@ -44,6 +119,13 @@ header{
 			width: 100%;
 			height: auto;
 			margin-top: 1em;
+			@include desde (web){
+				width: 60%;
+				height: auto;
+				margin-top: 1em;
+				float: left;
+				margin-left: 5%;
+			}
 			@include desde (hd){
 				width: 60%;
 				height: auto;
