@@ -43,6 +43,45 @@ header{
 				float: left;
 			}
 		}
+
+		h2.process-text{
+			margin:0;
+			width: 100%;
+			color:$blanco;
+			font-weight: $normal;
+			font-style: italic;
+			font-size: 1.1em;
+			@include desde (tablet){
+				margin:0 auto;
+				width: 60%;
+			}
+			@include desde (tablet-h){
+				width: 49%;
+			}
+			@include desde (hd){
+				width: 40%;
+			}
+		}
+		a.cancel-help{
+			color:$blanco;
+			text-align: center;
+			width: 100%;
+			padding:4px;
+			border-radius: 3px;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 2px solid #8b0253;
+			margin-top: 1em;
+			background-color: #b8006d;
+			transition: all .3s;
+			display:block;
+			text-decoration: none;
+			@include desde (tablet){
+				margin: 1em auto 0 auto;
+				width: 20%;
+			}
+		}
 		
 		form#logindos{
 			width: 100%;
@@ -52,6 +91,9 @@ header{
 				float: left;
 				width: 60%;
 				margin-top:0;
+			}
+			@include desde (web){
+				width: 40%;
 			}
 			label{
 				width: 100%;
@@ -104,6 +146,24 @@ header{
 				&:hover{
 					background-color:#8b0253;
 				}
+			}
+
+			a.cancel-yes{
+				color:$blanco;
+				text-align: center;
+				width: 100%;
+				padding:6px;
+				border-radius: 3px;
+				border-top: none;
+				border-left: none;
+				border-right: none;
+				border-bottom: 2px solid #8b0253;
+				margin-top: 1em;
+				background-color: #b8006d;
+				color: #fff;
+				transition: all .3s;
+				display:block;
+				text-decoration: none;
 			}
 		}
 

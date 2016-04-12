@@ -59,27 +59,19 @@
       </div>
       <div class="caja web-100">
         <div id="box--login">
-          <h2 class="insc_log">Completa estos datos y nos pondremos en contacto contigo.</h2>
-          <form method="POST" action="procesar-inscribete.php" id="logindos">
-            <label>Nombre</label>
-            <input type="text" name="nombre" required>
-            <label>Rut</label>
-            <input type="text" name="rut" required>
-            <label>Correo</label>
-            <input type="text" name="email" required>
-            <label>Cargo</label>
-            <input type="text" name="cargo" required>
-            <button type="submit">Enviar</button>
-		  </form id="logindos">
-			<form method="POST" action="login.php">
-				<button type="submit">Cancelar</button>
-			</form>
-            <div class="caja no-padding">
-				<!--
-              <button class="recuperar">Recuperar contraseña</button>
-			  -->
-            </div>
-          
+            <h2 class="insc_log">Completa estos datos y nos pondremos en contacto contigo.</h2>
+            <form method="POST" action="procesar-inscribete.php" id="logindos">
+              <label>Nombre</label>
+              <input type="text" name="nombre" required>
+              <label>Rut</label>
+              <input type="text" name="rut" required>
+              <label>Correo</label>
+              <input type="text" name="email" required>
+              <label>Cargo</label>
+              <input type="text" name="cargo" required>
+              <button type="submit">Enviar</button>
+              <a class="cancel-yes" href="login.php">Cancelar</a>
+  		      </form>
         </div>
       </div>
     </header>

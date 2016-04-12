@@ -85,10 +85,8 @@
       </div>
       <div class="caja web-100">
         <div id="box--login">
-          <h2 class="insc_log">Gracias por regitrar tus datos, te contactaremos a la brevedad para que puedas acceder al programa</h2>          
-			<form method="POST" action="login.php">
-				<button type="submit">Aceptar</button>
-			</form>
+          <h2 class="process-text">Gracias por registrar tus datos, te contactaremos a la brevedad para que puedas acceder al programa</h2>          
+			<a class="cancel-help" href="login.php">Aceptar</a>
             <div class="caja no-padding">
 				<!--
               <button class="recuperar">Recuperar contraseña</button>
