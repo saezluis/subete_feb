@@ -22,9 +22,16 @@
 
 	</script>
 	
+	<script type = "text/javascript" >
+		history.pushState(null, null, 'inscribete.php');
+		window.addEventListener('popstate', function(event) {
+			history.pushState(null, null, 'inscribete.php');
+		});
+    </script>
+	
   </head>
   <body class="noBack">
-	
+	<!--
 	<div id="boxes">
 		<div style="display: none; background:url(strip.jpg) no-repeat #fff; width:450px !important;" id="dialog" class="window centrado-porcentual"> 
 			<h1>Súbete al programa donde todos crecemos, siguiendo estas indicaciones.</h1>
@@ -38,7 +45,7 @@
 		</div>
 		<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 	</div>
-	
+	-->
     <div id="strip"></div>
     <header class="grupo">
       <div class="caja base-100">
@@ -52,23 +59,27 @@
       </div>
       <div class="caja web-100">
         <div id="box--login">
-          <h2 class="insc_log">Ingresa con tus datos y nos pondremos en contacto contigo.</h2>
-          <form method="post" action="checklogin-dos.php" id="logindos">
+          <h2 class="insc_log">Completa estos datos y nos pondremos en contacto contigo.</h2>
+          <form method="POST" action="procesar-inscribete.php" id="logindos">
             <label>Nombre</label>
-            <input type="text" name="">
+            <input type="text" name="nombre" required>
             <label>Rut</label>
-            <input type="text" name="username">
+            <input type="text" name="rut" required>
             <label>Correo</label>
-            <input type="text" name="text">
+            <input type="text" name="email" required>
             <label>Cargo</label>
-            <input type="text" name="text">
-            <button type="submit">Ingresar</button>
+            <input type="text" name="cargo" required>
+            <button type="submit">Enviar</button>
+		  </form id="logindos">
+			<form method="POST" action="login.php">
+				<button type="submit">Cancelar</button>
+			</form>
             <div class="caja no-padding">
 				<!--
               <button class="recuperar">Recuperar contraseña</button>
 			  -->
             </div>
-          </form>
+          
         </div>
       </div>
     </header>

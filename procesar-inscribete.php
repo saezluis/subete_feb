@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Login / Súbete</title>
+    <title>Inscríbete / Súbete</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1">
     <link rel="stylesheet" href="css/estilos.css">
@@ -22,9 +22,16 @@
 
 	</script>
 	
+	<script type = "text/javascript" >
+		history.pushState(null, null, 'procesar-inscribete.php');
+		window.addEventListener('popstate', function(event) {
+			history.pushState(null, null, 'procesar-inscribete.php');
+		});
+    </script>
+	
   </head>
   <body class="noBack">
-	
+	<!--
 	<div id="boxes">
 		<div style="display: none; background:url(strip.jpg) no-repeat #fff; width:450px !important;" id="dialog" class="window centrado-porcentual"> 
 			<h1>Súbete al programa donde todos crecemos, siguiendo estas indicaciones.</h1>
@@ -38,7 +45,33 @@
 		</div>
 		<div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
 	</div>
+	-->
+	<?php
 	
+		include_once 'config.php';
+
+		$conexion=mysqli_connect($host,$username,$password,$db_name) or die("Problemas con la conexión");
+		$acentos = $conexion->query("SET NAMES 'utf8'");
+		
+		$nombre = $_REQUEST['nombre'];
+		$rut = $_REQUEST['rut'];
+		$email = $_REQUEST['email'];
+		$cargo = $_REQUEST['cargo'];
+		
+		date_default_timezone_set("America/Santiago");
+		$date =  date("Y-m-d h:i:sa");
+		$timestamp = date('Y-m-d H:i:s', strtotime($date));
+		
+		mysqli_query($conexion,"INSERT INTO pre_registro(nombre,rut,email,cargo,fecha) VALUES ('$nombre','$rut','$email','$cargo','$timestamp') ") or die("Problemas en el select de pre_registro:".mysqli_error($conexion));
+		
+		$user = $email;
+		$usersubject = "Nuevo pre-registro en página de subete";
+		$userheaders = "From: Servidor Subete";
+		$usermessage = "Datos dejados por el usuario. Nombre: ".$nombre." Rut: ".$rut." email: ".$email." cargo: ".$cargo;
+	
+		mail($user,$usersubject,$usermessage,$userheaders);
+	
+	?>
     <div id="strip"></div>
     <header class="grupo">
       <div class="caja base-100">
@@ -52,19 +85,16 @@
       </div>
       <div class="caja web-100">
         <div id="box--login">
-          <h1>Ingresa con tus datos.</h1>
-          <form method="post" action="checklogin-dos.php" id="login">
-            <label>Rut</label>
-            <input type="text" name="username" required>
-            <label>Contraseña</label>
-            <input type="password" name="password" required>
-            <button type="submit">Ingresar</button>
+          <h2 class="insc_log">Gracias por regitrar tus datos, te contactaremos a la brevedad para que puedas acceder al programa</h2>          
+			<form method="POST" action="login.php">
+				<button type="submit">Aceptar</button>
+			</form>
             <div class="caja no-padding">
 				<!--
               <button class="recuperar">Recuperar contraseña</button>
 			  -->
             </div>
-          </form>
+          
         </div>
       </div>
     </header>
