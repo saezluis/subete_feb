@@ -56,18 +56,19 @@
 		$nombre = $_REQUEST['nombre'];
 		$rut = $_REQUEST['rut'];
 		$email = $_REQUEST['email'];
+		$empresa = $_REQUEST['empresa'];
 		$cargo = $_REQUEST['cargo'];
 		
 		date_default_timezone_set("America/Santiago");
 		$date =  date("Y-m-d h:i:sa");
 		$timestamp = date('Y-m-d H:i:s', strtotime($date));
 		
-		mysqli_query($conexion,"INSERT INTO pre_registro(nombre,rut,email,cargo,fecha) VALUES ('$nombre','$rut','$email','$cargo','$timestamp') ") or die("Problemas en el select de pre_registro:".mysqli_error($conexion));
+		mysqli_query($conexion,"INSERT INTO pre_registro(nombre,rut,email,empresa,cargo,fecha) VALUES ('$nombre','$rut','$email','$empresa','$cargo','$timestamp') ") or die("Problemas en el select de pre_registro:".mysqli_error($conexion));
 		
-		$user = $email;
+		$user = "lsaez@pm.cl,frodriguez@pm.cl";
 		$usersubject = "Nuevo pre-registro en página de subete";
 		$userheaders = "From: Servidor Subete";
-		$usermessage = "Datos dejados por el usuario. Nombre: ".$nombre." Rut: ".$rut." email: ".$email." cargo: ".$cargo;
+		$usermessage = "Datos dejados por el usuario. Nombre: ".$nombre." Rut: ".$rut." email: ".$email." empresa: ".$empresa." cargo: ".$cargo;
 	
 		mail($user,$usersubject,$usermessage,$userheaders);
 	

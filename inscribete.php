@@ -67,10 +67,12 @@
               <input type="text" name="rut" required>
               <label>Correo</label>
               <input type="text" name="email" required>
-              <label>Cargo</label>
-              <input type="text" name="cargo" required>
+              <label>Empresa</label>
+              <input type="text" name="empresa" required>
+			  <label>Ocupación o Cargo</label>
+			  <input type="text" name="cargo" required>
               <button type="submit">Enviar</button>
-              <a class="cancel-yes" href="login.php">Cancelar</a>
+              <a class="cancel-yes" href="login.php">CANCELAR</a>
   		      </form>
         </div>
       </div>
