@@ -2012,6 +2012,33 @@ header #box--login {
       header #box--login h2.insc_log {
         width: 38%;
         float: left; } }
+  header #box--login .btnRegister {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background: #02AEEF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    transition: .3s all;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 1em;
+    border-bottom: 2px solid #0A444C;
+    margin: 16px auto 0 auto; }
+    header #box--login .btnRegister:hover {
+      background: #1D6A88; }
+    @media screen and (min-width: 768px) {
+      header #box--login .btnRegister {
+        width: 35%; } }
+    @media screen and (min-width: 1400px) {
+      header #box--login .btnRegister {
+        width: 38%; } }
+    header #box--login .btnRegister span {
+      font-size: 0.7em;
+      width: 100%;
+      display: block; }
   header #box--login h2.process-text {
     margin: 0;
     width: 100%;

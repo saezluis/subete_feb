@@ -44,6 +44,38 @@ header{
 			}
 		}
 
+		//registro nuevo
+		.btnRegister{
+			width: 100%;
+			padding:10px;
+			color:#fff;
+			text-align: center;
+			background: #02AEEF;
+			-webkit-border-radius: 3px;
+    		-moz-border-radius: 3px;
+    		transition: .3s all;
+    		display:block;
+    		text-transform: uppercase;
+    		text-decoration: none;
+    		margin-top: 1em;
+    		border-bottom:2px solid #0A444C;
+    		margin:16px auto 0 auto;
+    		&:hover{
+    			background:#1D6A88;
+    		}
+    		@include desde (tablet){
+    			width: 35%;
+    		}
+    		@include desde (hd){
+    			width: 38%;
+    		}
+    		& span{
+				font-size: 0.7em;
+			    width: 100%;
+			    display: block;
+    		}
+		}
+
 		h2.process-text{
 			margin:0;
 			width: 100%;

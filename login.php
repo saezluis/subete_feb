@@ -60,6 +60,7 @@
             <input type="password" name="password" required>
             <button type="submit">Ingresar</button>
             <div class="caja no-padding">
+            <a class="btnRegister" href="#">Regístrate <span>y se parte de Súbete haz click aquí</span></a>
 				<!--
               <button class="recuperar">Recuperar contraseña</button>
 			  -->
